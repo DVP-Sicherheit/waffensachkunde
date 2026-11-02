@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full bg-slate-900 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Waffensachkunde §7 WaffG - Trainer</title>
+  
+  <!-- PWA & Mobile Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Sleek scrollbar for mobile */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    
+    .touch-manipulation { touch-action: manipulation; }
+    
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .animate-slide-up {
+      animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans select-none antialiased touch-manipulation overflow-hidden">
+
+  <!-- ================= TOP HEADER ================= -->
+  <header class="flex-none px-4 py-3 bg-slate-900/95 backdrop-blur border-b border-slate-800 flex items-center justify-between z-10">
+    <div class="flex items-center gap-2">
+      <!-- Settings Button Top Left -->
+      <button id="btnOpenSettings" class="p-2 -ml-1 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition active:scale-95" title="Einstellungen">
+        <i data-lucide="settings" class="w-5 h-5"></i>
+      </button>
+      <span class="font-bold text-base tracking-wide bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
+        Sachkunde § 7 WaffG
+      </span>
+    </div>
+    
+    <div class="flex items-center gap-2">
+      <span id="headerCatalogBadge" class="text-xs px-2.5 py-0.5 rounded-full font-medium bg-slate-800 text-slate-300 border border-slate-700">
+        Lade...
+      </span>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT (SCROLLABLE DASHBOARD) ================= -->
+  <main id="viewHome" class="flex-1 overflow-y-auto px-4 py-4 space-y-4 max-w-lg mx-auto w-full pb-20">
+    
+    <!-- 1. Grosser Haupt-Button LERNEN mit Farbverlauf & Filter-Icon rechts -->
+    <div class="relative group">
+      <div class="flex rounded-2xl bg-gradient-to-r from-blue-600 via-sky-600 to-blue-700 p-0.5 shadow-lg shadow-blue-900/30">
+        <button id="btnStartLearningGlobal" class="flex-1 flex items-center justify-center gap-2 py-3.5 pl-4 font-semibold text-white tracking-wide text-base active:opacity-90">
+          <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+          <span>Lernen starten</span>
+        </button>
+        <button id="btnOpenGlobalFilter" class="px-4 border-l border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 rounded-r-2xl active:scale-95 transition" title="Filter & Auswahl">
+          <i data-lucide="sliders-horizontal" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 2. Button PRÜFUNGSSIMULATION (100 Fragen BVA-Norm) -->
+    <button id="btnStartExam" class="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-slate-800/90 border border-slate-700/80 hover:border-slate-600 shadow-md text-slate-200 active:bg-slate-700 transition">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
+          <i data-lucide="award" class="w-5 h-5"></i>
+        </div>
+        <div class="text-left">
+          <div class="font-semibold text-sm text-slate-100">Prüfungssimulation</div>
+          <div class="text-xs text-slate-400">100 zufällige Fragen aus allen Gebieten (ab 80% bestanden)</div>
+        </div>
+      </div>
+      <i data-lucide="chevron-right" class="w-5 h-5 text-slate-500"></i>
+    </button>
+
+    <!-- 3. Kasten LERNFORTSCHRITT -->
+    <div class="rounded-2xl bg-slate-800/60 border border-slate-800 p-4 space-y-3 backdrop-blur shadow-sm">
+      <div class="flex items-center justify-between text-xs font-semibold text-slate-400 uppercase tracking-wider">
+        <span>Gesamtfortschritt</span>
+        <span id="progressStatsText" class="text-slate-200 font-bold">0 / 0</span>
+      </div>
+
+      <!-- Zweifarbiger Fortschrittsbalken -->
+      <div class="w-full h-3 bg-slate-900 rounded-full overflow-hidden flex p-0.5 border border-slate-700/50">
+        <div id="barCorrect" class="h-full bg-emerald-500 rounded-l-full transition-all duration-300" style="width: 0%"></div>
+        <div id="barWrong" class="h-full bg-rose-500 transition-all duration-300" style="width: 0%"></div>
+      </div>
+
+      <!-- 3 Zeilen mit Farbpunkten -->
+      <div class="space-y-1.5 pt-1 text-xs">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-sm shadow-emerald-500/50"></span>
+            <span class="text-slate-300">Richtig beantwortet</span>
+          </div>
+          <span id="countCorrect" class="font-semibold text-emerald-400">0</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 shadow-sm shadow-rose-500/50"></span>
+            <span class="text-slate-300">Falsch beantwortet</span>
+          </div>
+          <span id="countWrong" class="font-semibold text-rose-400">0</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+            <span class="text-slate-400">Unbeantwortet</span>
+          </div>
+          <span id="countUnanswered" class="font-semibold text-slate-400">0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. SACHGEBIETE (Kompaktes 2-Spalten-Grid in harmonischen Blautönen) -->
+    <div class="space-y-2">
+      <div class="flex items-center justify-between px-1">
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Sachgebiete</span>
+        <span class="text-[11px] text-slate-500">Antippen für Details</span>
+      </div>
+
+      <div id="gridTopics" class="grid grid-cols-2 gap-2.5">
+        <!-- Dynamisch gefüllt -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= POP-UP 1: THEMEN-DETAIL (1/4 DES BILDSCHIRMS) ================= -->
+  <div id="modalQuarter" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden flex items-end justify-center">
+    <div class="w-full max-w-lg bg-slate-900 border-t border-slate-700/80 rounded-t-3xl p-4 space-y-3.5 shadow-2xl animate-slide-up">
+      <!-- Handle bar -->
+      <div class="w-12 h-1 bg-slate-700 rounded-full mx-auto -mt-1 mb-1 cursor-pointer" onclick="closeQuarterModal()"></div>
+
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="text-[11px] font-semibold text-sky-400 uppercase tracking-wider">Sachgebiet</span>
+          <h3 id="quarterTopicTitle" class="text-sm font-bold text-slate-100 line-clamp-1">Waffenrecht</h3>
+        </div>
+        <button id="btnCloseQuarter" class="p-1 text-slate-400 hover:text-white rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Fortschrittskachel -->
+      <div class="bg-slate-800/80 rounded-xl p-3 border border-slate-700/60 space-y-2">
+        <div class="flex items-center justify-between text-xs">
+          <span class="text-slate-400">Fortschritt im Sachgebiet:</span>
+          <span id="quarterProgressNumbers" class="font-bold text-slate-200">0 / 0</span>
+        </div>
+        <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden flex">
+          <div id="quarterBarCorrect" class="h-full bg-emerald-500" style="width: 0%"></div>
+          <div id="quarterBarWrong" class="h-full bg-rose-500" style="width: 0%"></div>
+        </div>
+        <div class="flex items-center gap-2 pt-1 text-xs text-slate-400">
+          <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+          <span>Unbeantwortet:</span>
+          <span id="quarterCountUnanswered" class="font-semibold text-slate-300">0</span>
+        </div>
+      </div>
+
+      <!-- Button Thema Lernen mit Filter-Icon rechts -->
+      <div class="flex rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 p-0.5 shadow-md">
+        <button id="btnQuarterStartLearn" class="flex-1 py-3 pl-3 flex items-center justify-center gap-2 font-semibold text-sm text-white active:opacity-90">
+          <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+          <span>Thema lernen</span>
+        </button>
+        <button id="btnQuarterOpenFilter" class="px-3.5 border-l border-white/20 flex items-center justify-center text-white/80 hover:text-white rounded-r-xl" title="Filtereinstellungen">
+          <i data-lucide="sliders-horizontal" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= POP-UP 2: FILTER & AUSWAHL (1/2 DES BILDSCHIRMS) ================= -->
+  <div id="modalHalf" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-end justify-center">
+    <div class="w-full max-w-lg max-h-[85vh] overflow-y-auto bg-slate-900 border-t border-slate-700 rounded-t-3xl p-5 space-y-4 shadow-2xl animate-slide-up">
+      <!-- Handle bar -->
+      <div class="w-12 h-1 bg-slate-700 rounded-full mx-auto -mt-2 mb-2 cursor-pointer" onclick="closeHalfModal()"></div>
+
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2">
+          <i data-lucide="sliders-horizontal" class="w-5 h-5 text-sky-400"></i>
+          <h2 class="font-bold text-base text-slate-100">Lern-Filter</h2>
+        </div>
+        <button id="btnCloseHalf" class="p-1 text-slate-400 hover:text-white rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Dropdown Fragentyp -->
+      <div class="space-y-1.5">
+        <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Fragentyp</label>
+        <select id="selectQuestionType" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-sky-500">
+          <option value="all">Alle (Multiple Choice & Freitext)</option>
+          <option value="mc">Nur Multiple Choice</option>
+          <option value="text">Nur Freitext</option>
+        </select>
+      </div>
+
+      <!-- Filter-Kacheln mit dynamischen Zählern -->
+      <div class="space-y-1.5">
+        <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Lernkategorie wählen</label>
+        <div class="grid grid-cols-1 gap-2 text-sm" id="filterStatusOptions">
+          <!-- Dynamisch mit Zählern befüllt -->
+        </div>
+      </div>
+
+      <button id="btnApplyFilterAndStart" class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 active:bg-sky-700 font-semibold text-white shadow-lg shadow-sky-900/30 transition text-sm">
+        Auswahl lernen (<span id="filterMatchingCount">0</span> Fragen)
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= POP-UP 3: ALLGEMEINE EINSTELLUNGEN ================= -->
+  <div id="modalSettings" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-end justify-center">
+    <div class="w-full max-w-lg max-h-[90vh] overflow-y-auto bg-slate-900 border-t border-slate-700 rounded-t-3xl p-5 space-y-4 shadow-2xl animate-slide-up">
+      <div class="w-12 h-1 bg-slate-700 rounded-full mx-auto -mt-2 mb-2 cursor-pointer" onclick="closeSettingsModal()"></div>
+
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2">
+          <i data-lucide="settings" class="w-5 h-5 text-sky-400"></i>
+          <h2 class="font-bold text-base text-slate-100">Einstellungen</h2>
+        </div>
+        <button id="btnCloseSettings" class="p-1 text-slate-400 hover:text-white rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- 1. Fragen-Reihenfolge -->
+      <div class="space-y-1.5">
+        <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Reihenfolge der Fragen</label>
+        <select id="cfgOrder" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-sky-500">
+          <option value="catalog">Nach Fragenkatalog (Original-Reihenfolge)</option>
+          <option value="random">Zufällig gemischt</option>
+        </select>
+      </div>
+
+      <!-- 2. Fragen / Karten pro Durchgang -->
+      <div class="space-y-1.5">
+        <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Karten pro Durchgang</label>
+        <select id="cfgBatchSize" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-sky-500">
+          <option value="10">10 Fragen</option>
+          <option value="20">20 Fragen</option>
+          <option value="30">30 Fragen</option>
+          <option value="50">50 Fragen</option>
+          <option value="all">Alle verfügbaren Fragen</option>
+        </select>
+        <p class="text-[11px] text-slate-500">Bestimmt, wie viele Fragen am Stück in einer Lerneinheit abgefragt werden.</p>
+      </div>
+
+      <!-- 3. Falsche Fragen am Ende wiederholen -->
+      <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3 flex items-center justify-between gap-3">
+        <div class="space-y-0.5">
+          <div class="text-sm font-semibold text-slate-200">Falsche Fragen wiederholen</div>
+          <div class="text-xs text-slate-400">Falsch beantwortete Karten direkt am Ende der Runde erneut abfragen.</div>
+        </div>
+        <input type="checkbox" id="cfgRepeatWrong" class="w-5 h-5 accent-sky-500 rounded cursor-pointer">
+      </div>
+
+      <!-- 4. JSON-Katalog Import -->
+      <div class="pt-2 border-t border-slate-800 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase text-slate-400">Fragenkatalog-Daten</span>
+          <span id="settingsCatalogStatus" class="text-xs font-bold text-slate-300">Geladen</span>
+        </div>
+        <p class="text-xs text-slate-400">
+          Hier kannst du die exportierte <code class="text-sky-300 bg-slate-800 px-1 py-0.5 rounded">.json</code> Datei mit allen Fragen des BVA-Katalogs einlesen.
+        </p>
+        <input type="file" id="fileJsonInput" accept=".json" class="hidden">
+        <button id="btnTriggerFileImport" class="w-full py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center gap-2 text-xs font-medium text-slate-200 active:scale-98 transition">
+          <i data-lucide="upload" class="w-4 h-4"></i>
+          <span>Katalog-JSON importieren</span>
+        </button>
+      </div>
+
+      <!-- 5. Fortschritt zurücksetzen -->
+      <div class="pt-2 border-t border-slate-800">
+        <button id="btnResetProgress" class="w-full py-2.5 px-3 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 border border-rose-500/30 text-rose-400 text-xs font-medium transition active:scale-98">
+          Lernfortschritt komplett zurücksetzen
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TRAINER / EXAM VIEW (FULLSCREEN OVERLAY) ================= -->
+  <div id="viewTrainer" class="fixed inset-0 bg-slate-900 z-50 hidden flex flex-col">
+    <!-- Top Trainer Bar -->
+    <div class="px-4 py-3 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
+      <button id="btnExitTrainer" class="p-1.5 -ml-1 text-slate-400 hover:text-white rounded-lg">
+        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      </button>
+      <div class="text-center">
+        <div id="trainerModeBadge" class="text-[10px] uppercase font-bold tracking-wider text-sky-400">Lernmodus</div>
+        <div id="trainerCounter" class="text-xs font-bold text-slate-200">Frage 1 von 10</div>
+      </div>
+      <button id="btnToggleBookmark" class="p-1.5 -mr-1 text-slate-400 hover:text-amber-400 rounded-lg">
+        <i data-lucide="bookmark" id="bookmarkIcon" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Question Area -->
+    <div class="flex-1 overflow-y-auto px-4 py-4 space-y-4 max-w-lg mx-auto w-full">
+      <!-- Question Card -->
+      <div class="bg-slate-800/80 rounded-2xl p-4 border border-slate-700/80 shadow-md space-y-2">
+        <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium">
+          <span id="trainerQuestionId">1.01</span>
+          <span id="trainerQuestionTopic" class="truncate max-w-[200px]">Themenbereich</span>
+        </div>
+        <h2 id="trainerQuestionText" class="text-base font-semibold text-slate-100 leading-snug">
+          Fragetext wird geladen...
+        </h2>
+      </div>
+
+      <!-- Multiple Choice Options Container -->
+      <div id="containerOptions" class="space-y-2.5">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Free Text / Musterantwort Container -->
+      <div id="containerFreeText" class="space-y-3 hidden">
+        <button id="btnRevealAnswer" class="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sky-400 font-semibold text-sm flex items-center justify-center gap-2">
+          <i data-lucide="eye" class="w-4 h-4"></i>
+          <span>Musterantwort aufdecken</span>
+        </button>
+        <div id="boxRevealedAnswer" class="hidden bg-slate-800/90 rounded-2xl p-4 border border-slate-700 space-y-3">
+          <div class="text-xs font-bold text-amber-400 uppercase tracking-wide">Amtliche BVA-Musterantwort</div>
+          <p id="trainerMusterText" class="text-sm text-slate-200 leading-relaxed"></p>
+          <div class="flex items-center gap-2 pt-2 border-t border-slate-700">
+            <button id="btnRateSelfWrong" class="flex-1 py-2.5 rounded-xl bg-rose-600/20 text-rose-300 border border-rose-500/30 text-xs font-bold active:scale-95">
+              Wusste ich nicht
+            </button>
+            <button id="btnRateSelfCorrect" class="flex-1 py-2.5 rounded-xl bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold active:scale-95">
+              Gewusst
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <div class="p-4 bg-slate-900 border-t border-slate-800 max-w-lg mx-auto w-full">
+      <button id="btnCheckOrNext" class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 active:bg-sky-700 font-bold text-white text-sm shadow-lg shadow-sky-900/30 transition">
+        Antwort überprüfen
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= PRÜFUNGS-ERGEBNIS MODAL ================= -->
+  <div id="modalExamResult" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-slate-900 border border-slate-700 rounded-3xl p-6 space-y-5 text-center shadow-2xl">
+      <div id="examBadgeIcon" class="w-16 h-16 rounded-full mx-auto flex items-center justify-center text-3xl"></div>
+      
+      <div class="space-y-1">
+        <h2 id="examResultTitle" class="text-xl font-extrabold text-white">Prüfung bestanden!</h2>
+        <p id="examResultSubtitle" class="text-xs text-slate-400">Offizielle Sachkundeprüfung gem. § 7 WaffG</p>
+      </div>
+
+      <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 space-y-2">
+        <div class="text-3xl font-black text-sky-400" id="examScoreText">85 %</div>
+        <div class="text-xs text-slate-300" id="examPointsText">85 von 100 Fragen richtig</div>
+        <div class="text-[11px] text-slate-400">(Bestehensgrenze: mindestens 80 %)</div>
+      </div>
+
+      <div class="flex gap-2">
+        <button id="btnExamClose" class="flex-1 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-xs text-slate-300 transition">
+          Zum Hauptmenü
+        </button>
+        <button id="btnExamRepeatWrong" class="flex-1 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 font-semibold text-xs text-white transition hidden">
+          Fehler wiederholen
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ENGINE ================= -->
+  <script>
+    /* -------------------------------------------------------------
+       1. DIE 8 SACHGEBIETE & FARBSCHEMA
+       ------------------------------------------------------------- */
+    const TOPIC_CONFIG = [
+      { id: "1. Begriffe des Waffenrechts", title: "1. Begriffe", color: "from-blue-700 to-blue-900", border: "border-blue-600/40" },
+      { id: "2. Rechte und Pflichten", title: "2. Rechte & Pflichten", color: "from-sky-700 to-blue-900", border: "border-sky-600/40" },
+      { id: "3. Kennzeichnung von Schusswaffen und Munition", title: "3. Kennzeichnung", color: "from-indigo-700 to-blue-950", border: "border-indigo-600/40" },
+      { id: "4. Aufbewahrung von Schusswaffen und Munition", title: "4. Aufbewahrung", color: "from-blue-800 to-slate-900", border: "border-blue-700/40" },
+      { id: "5. Notwehr und Notstand", title: "5. Notwehr & Notstand", color: "from-cyan-800 to-blue-950", border: "border-cyan-600/40" },
+      { id: "Waffentechnik (Waffen, Munition, Geschosse)", title: "6. Waffentechnik", color: "from-sky-800 to-indigo-950", border: "border-sky-700/40" },
+      { id: "Handhabung von Schusswaffen und Munition", title: "7. Handhabung", color: "from-blue-900 to-slate-900", border: "border-blue-800/40" },
+      { id: "Not- und Seenotsignalmittel", title: "8. Signalmittel", color: "from-teal-800 to-blue-950", border: "border-teal-600/40" }
+    ];
+
+    /* -------------------------------------------------------------
+       2. UMFANGREICHER FRAGEN-STAMM (OFFIZIELLER BVA-KATALOG)
+       ------------------------------------------------------------- */
+    const EMBEDDED_SAMPLE_QUESTIONS = [
+      // 1. Begriffe des Waffenrechts
+      {
+        id: "1.01", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Freitext",
+        frage: "Was regelt das Waffengesetz?", optionen: [], loesung: [],
+        musterantwort: "Das Waffengesetz regelt den Umgang mit Waffen oder Munition unter Berücksichtigung der Belange der öffentlichen Sicherheit und Ordnung."
+      },
+      {
+        id: "1.02", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Multiple Choice",
+        frage: "Umgang mit einer Schusswaffe hat…",
+        optionen: [
+          { key: "a", text: "wer damit schießt." },
+          { key: "b", text: "wer die Waffe verbringt oder mitnimmt." },
+          { key: "c", text: "wer die Waffe unbrauchbar macht." }
+        ],
+        loesung: ["A", "B", "C"], musterantwort: "Alle drei Handlungen stellen waffenrechtlichen Umgang dar."
+      },
+      {
+        id: "1.03", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Freitext",
+        frage: "Wie werden Schusswaffen im Sinne des Waffengesetzes definiert?", optionen: [], loesung: [],
+        musterantwort: "Schusswaffen sind Gegenstände, die zum Angriff oder zur Verteidigung, zur Signalgebung, zur Jagd, zur Distanzinjektion, zur Markierung, zum Sport oder zum Spiel bestimmt sind und bei denen Geschosse durch einen Lauf getrieben werden (Anlage 1 Abschnitt 1 Unterabschnitt 1 Nr. 1.1 WaffG)."
+      },
+      {
+        id: "1.04", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Multiple Choice",
+        frage: "Welche der hier genannten Gegenstände sind Schusswaffen im Sinne des Waffengesetzes?",
+        optionen: [
+          { key: "a", text: "Armbrust" },
+          { key: "b", text: "Druckluftgewehr mit Zulassungszeichen „F im Fünfeck“" },
+          { key: "c", text: "Doppelflinte" }
+        ],
+        loesung: ["B", "C"], musterantwort: "Druckluftgewehre und Doppelflinten treiben Geschosse durch einen Lauf; die Armbrust ist den Schusswaffen nur gleichgestellt."
+      },
+      {
+        id: "1.06", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Multiple Choice",
+        frage: "Welche der aufgeführten Waffen ist eine halbautomatische Schusswaffe im Sinne des Waffengesetzes?",
+        optionen: [
+          { key: "a", text: "Single Action Revolver" },
+          { key: "b", text: "Selbstladepistole" },
+          { key: "c", text: "Doppelflinte" },
+          { key: "d", text: "Double Action Revolver" }
+        ],
+        loesung: ["B"], musterantwort: "Nur die Selbstladepistole lädt selbsttätig erneut nach und feuert bei erneuter Betätigung des Abzugs."
+      },
+      {
+        id: "1.09", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Freitext",
+        frage: "Welches sind die wesentlichen Teile einer halbautomatischen Pistole im waffenrechtlichen Sinne?", optionen: [], loesung: [],
+        musterantwort: "1. Lauf (Patronenlager), 2. Verschluss, 3. Griffstück."
+      },
+      {
+        id: "1.13", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Multiple Choice",
+        frage: "Welcher der nebenstehend aufgeführten Gegenstände ist eine verbotene Waffe/verbotener Gegenstand?",
+        optionen: [
+          { key: "a", text: "Blasrohr, Harpune, Armbrust" },
+          { key: "b", text: "halbautomatisches Gewehr / Pistole" },
+          { key: "c", text: "Schlagring, Stockdegen, Würgeholz (Nun-Chaku)" },
+          { key: "d", text: "Wurfsterne, bestimmte Hartkernmunition" }
+        ],
+        loesung: ["C", "D"], musterantwort: "Schlagringe, Nun-Chakus, Wurfsterne und Hartkernmunition sind verbotene Gegenstände."
+      },
+      {
+        id: "1.45", kapitel: "Kapitel I", themengebiet: "1. Begriffe des Waffenrechts", typ: "Freitext",
+        frage: "Was bedeutet „Führen“ im Sinne des Waffengesetzes?", optionen: [], loesung: [],
+        musterantwort: "Das Ausüben der tatsächlichen Gewalt außerhalb der eigenen Wohnung, Geschäftsräume, des eigenen befriedeten Besitztums oder einer Schießstätte."
+      },
+
+      // 2. Rechte und Pflichten
+      {
+        id: "2.01", kapitel: "Kapitel I", themengebiet: "2. Rechte und Pflichten", typ: "Multiple Choice",
+        frage: "Was muss der Erwerbsberechtigte nach dem Kauf einer Schusswaffe von einer Privatperson/Händler veranlassen?",
+        optionen: [
+          { key: "a", text: "Er muss einen lizenzierten Waffenhändler einschalten." },
+          { key: "b", text: "Er muss den Kauf der Behörde formlos unter Vorlage des Kaufvertrages mitteilen." },
+          { key: "c", text: "Er muss innerhalb von zwei Wochen bei der zuständigen Behörde den Erwerb schriftlich oder elektronisch anzeigen und seine WBK zur Eintragung vorlegen." }
+        ],
+        loesung: ["C"], musterantwort: "Frist von zwei Wochen zur Anzeige und Vorlage der Waffenbesitzkarte."
+      },
+      {
+        id: "2.03", kapitel: "Kapitel I", themengebiet: "2. Rechte und Pflichten", typ: "Multiple Choice",
+        frage: "Innerhalb welcher Zeit haben Sie den Erwerb bzw. Verkauf einer erlaubnispflichtigen Waffe anzuzeigen?",
+        optionen: [
+          { key: "a", text: "binnen einer Woche" },
+          { key: "b", text: "binnen zwei Wochen" },
+          { key: "c", text: "binnen eines Monats" }
+        ],
+        loesung: ["B"], musterantwort: "Binnen zwei Wochen bei der zuständigen Erlaubnisbehörde."
+      },
+      {
+        id: "2.21", kapitel: "Kapitel I", themengebiet: "2. Rechte und Pflichten", typ: "Freitext",
+        frage: "Welche Teile erlaubnispflichtiger Schusswaffen dürfen einzeln nur mit Erwerbserlaubnis erworben werden?", optionen: [], loesung: [],
+        musterantwort: "Lauf, Verschluss, Patronen- oder Kartuschenlager, Griffstück bei Kurzwaffen."
+      },
+      {
+        id: "2.30", kapitel: "Kapitel I", themengebiet: "2. Rechte und Pflichten", typ: "Multiple Choice",
+        frage: "Wie viele Waffen darf ein Sportschütze maximal mit seiner gelben Waffenbesitzkarte erwerben bzw. darin eintragen lassen?",
+        optionen: [
+          { key: "a", text: "Bis zu zehn Waffen gemäß den gesetzlichen Vorgaben." },
+          { key: "b", text: "Unbegrenzte Anzahl mit Verbandsbescheinigung." },
+          { key: "c", text: "Unbegrenzte Anzahl, jedoch keine Kurzwaffen." }
+        ],
+        loesung: ["A"], musterantwort: "Gesetzliche Höchstgrenze für die gelbe WBK: maximal zehn Waffen."
+      },
+      {
+        id: "2.31", kapitel: "Kapitel I", themengebiet: "2. Rechte und Pflichten", typ: "Multiple Choice",
+        frage: "Wie viele Schusswaffen dürfen Sie als Sportschütze maximal innerhalb von sechs Monaten bei entsprechendem Bedürfnis erwerben?",
+        optionen: [
+          { key: "a", text: "Zwei" },
+          { key: "b", text: "Eine" },
+          { key: "c", text: "Drei" }
+        ],
+        loesung: ["A"], musterantwort: "Erwerbsstreckungsgebot: Maximal zwei Schusswaffen im Halbjahr."
+      },
+
+      // 3. Kennzeichnung
+      {
+        id: "3.02", kapitel: "Kapitel I", themengebiet: "3. Kennzeichnung von Schusswaffen und Munition", typ: "Multiple Choice",
+        frage: "Welches Kennzeichen muss u.a. auf einem Großkaliber-Revolver angebracht sein?",
+        optionen: [
+          { key: "a", text: "Bezeichnung der Munition" },
+          { key: "b", text: "Herstellerzeichen" },
+          { key: "c", text: "Warnhinweis „Gefährlich...“" }
+        ],
+        loesung: ["A", "B"], musterantwort: "Munitionsbezeichnung und Herstellerzeichen sind vorgeschrieben."
+      },
+      {
+        id: "3.09", kapitel: "Kapitel I", themengebiet: "3. Kennzeichnung von Schusswaffen und Munition", typ: "Freitext",
+        frage: "Handfeuerwaffen müssen Beschusszeichen tragen. Was wird geprüft?", optionen: [], loesung: [],
+        musterantwort: "Haltbarkeit, Funktionssicherheit, Maßhaltigkeit und richtige Kennzeichnung."
+      },
+      {
+        id: "3.20", kapitel: "Kapitel I", themengebiet: "3. Kennzeichnung von Schusswaffen und Munition", typ: "Multiple Choice",
+        frage: "Welche Bedeutung hat ein amtliches Beschusszeichen?",
+        optionen: [
+          { key: "a", text: "Sicherheitsprüfung durch den TÜV" },
+          { key: "b", text: "Funktionsprüfung der PTB" },
+          { key: "c", text: "Die Waffe ist auf Haltbarkeit, Funktionssicherheit, Maßhaltigkeit und Kennzeichnung durch ein anerkanntes Beschussamt geprüft." }
+        ],
+        loesung: ["C"], musterantwort: "Amtliche Prüfung durch ein anerkanntes Beschussamt."
+      },
+
+      // 4. Aufbewahrung
+      {
+        id: "4.01", kapitel: "Kapitel I", themengebiet: "4. Aufbewahrung von Schusswaffen und Munition", typ: "Multiple Choice",
+        frage: "Wo darf eine erlaubnispflichtige Kurzwaffe gelagert werden?",
+        optionen: [
+          { key: "a", text: "Im A-Schrank nach VDMA 24992 ohne Munition." },
+          { key: "b", text: "Im B-Schrank nach VDMA 24992 (unter Bestandsschutz vor dem 06.07.2017)." },
+          { key: "c", text: "In einem Waffenschrank der Norm DIN/EN 1143-1 mit dem Widerstandsgrad 0 oder I." }
+        ],
+        loesung: ["B", "C"], musterantwort: "B-Schrank (nur noch unter Bestandsschutz) oder DIN/EN 1143-1 Grad 0/I."
+      },
+      {
+        id: "4.03", kapitel: "Kapitel I", themengebiet: "4. Aufbewahrung von Schusswaffen und Munition", typ: "Multiple Choice",
+        frage: "In welchem Behältnis darf erlaubnispflichtige Munition gelagert werden?",
+        optionen: [
+          { key: "a", text: "Wohnzimmerschrank mit Sicherheitsschloss" },
+          { key: "b", text: "Blechschrank mit Vorhängeschloss" },
+          { key: "c", text: "Stahlblechbehältnis mit Schwenkriegelschloss" }
+        ],
+        loesung: ["C"], musterantwort: "Stahlblechbehältnis mit Schwenkriegelschloss oder gleichwertiges Behältnis."
+      },
+      {
+        id: "4.10", kapitel: "Kapitel I", themengebiet: "4. Aufbewahrung von Schusswaffen und Munition", typ: "Freitext",
+        frage: "Wozu kann die nicht ordnungsgemäße Aufbewahrung von Waffen oder Munition u.a. führen?", optionen: [], loesung: [],
+        musterantwort: "Zum Verlust der waffenrechtlichen Zuverlässigkeit."
+      },
+
+      // 5. Notwehr und Notstand
+      {
+        id: "5.01", kapitel: "Kapitel I", themengebiet: "5. Notwehr und Notstand", typ: "Freitext",
+        frage: "Was ist Notwehr?", optionen: [], loesung: [],
+        musterantwort: "Notwehr ist diejenige Verteidigung, die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff von sich oder einem anderen abzuwenden."
+      },
+      {
+        id: "5.03", kapitel: "Kapitel I", themengebiet: "5. Notwehr und Notstand", typ: "Multiple Choice",
+        frage: "Notwehr ist...",
+        optionen: [
+          { key: "a", text: "jede Abwehr eines Angriffs von sich und anderen." },
+          { key: "b", text: "jede Verteidigung, die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff von sich oder einem anderen abzuwenden." },
+          { key: "c", text: "jede Verteidigung um jeden Angriff abzuwenden." }
+        ],
+        loesung: ["B"], musterantwort: "Gesetzlicher Wortlaut (§ 32 StGB / § 227 BGB)."
+      },
+      {
+        id: "5.06", kapitel: "Kapitel I", themengebiet: "5. Notwehr und Notstand", typ: "Multiple Choice",
+        frage: "Welches sind Voraussetzungen der Notwehr?",
+        optionen: [
+          { key: "a", text: "Verteidigungslage" },
+          { key: "b", text: "Verteidigungswille" },
+          { key: "c", text: "Erforderlichkeit" }
+        ],
+        loesung: ["A", "B", "C"], musterantwort: "Verteidigungslage, -wille und Erforderlichkeit müssen kumulativ vorliegen."
+      },
+
+      // 6. Waffentechnik
+      {
+        id: "II.01", kapitel: "Kapitel II", themengebiet: "Waffentechnik (Waffen, Munition, Geschosse)", typ: "Freitext",
+        frage: "Was ist eine Kurzwaffe?", optionen: [], loesung: [],
+        musterantwort: "Eine Kurzwaffe ist eine Schusswaffe, deren Lauf und Verschluss in geschlossener Stellung insgesamt kürzer als 30 cm sind und/oder deren kürzeste bestimmungsgemäße Gesamtlänge 60 cm nicht überschreitet."
+      },
+      {
+        id: "II.03", kapitel: "Kapitel II", themengebiet: "Waffentechnik (Waffen, Munition, Geschosse)", typ: "Multiple Choice",
+        frage: "Was sind die typischen Merkmale einer halbautomatischen Büchse?",
+        optionen: [
+          { key: "a", text: "Durch einmaliges Betätigen des Abzuges mehrere Schüsse abgeben." },
+          { key: "b", text: "Nach Abgabe selbsttätig schussbereit; Einzelschuss pro Betätigung des Abzugs." },
+          { key: "c", text: "Es handelt sich um eine Militärwaffe." }
+        ],
+        loesung: ["B"], musterantwort: "Selbsttätiges erneutes Schussbereitwerden, genau ein Schuss je Betätigung."
+      },
+      {
+        id: "II.16", kapitel: "Kapitel II", themengebiet: "Waffentechnik (Waffen, Munition, Geschosse)", typ: "Multiple Choice",
+        frage: "Welche der nachfolgenden Aussagen ist richtig?",
+        optionen: [
+          { key: "a", text: "Repetierwaffen haben immer ein Magazin." },
+          { key: "b", text: "Revolver haben immer eine Trommel." },
+          { key: "c", text: "Pistolen haben immer ein Magazin." }
+        ],
+        loesung: ["A", "B"], musterantwort: "Repetierer haben zwingend ein Magazin, Revolver eine Trommel."
+      },
+      {
+        id: "II.29", kapitel: "Kapitel II", themengebiet: "Waffentechnik (Waffen, Munition, Geschosse)", typ: "Multiple Choice",
+        frage: "Was bedeutet die Zahl 12 bei Schrotpatronen?",
+        optionen: [
+          { key: "a", text: "Der Laufdurchmesser beträgt 12 mm." },
+          { key: "b", text: "In der Schrotpatrone befinden sich 12 Schrote." },
+          { key: "c", text: "Anzahl Bleikugeln vom Laufdurchmesser, die zusammen 1 englisches Pfund (453,6 g) wiegen." }
+        ],
+        loesung: ["C"], musterantwort: "Historische englische Definition der Flintenkaliber."
+      },
+
+      // 7. Handhabung
+      {
+        id: "III.01", kapitel: "Kapitel III", themengebiet: "Handhabung von Schusswaffen und Munition", typ: "Multiple Choice",
+        frage: "Darf eine Schusswaffe, auch wenn sie ungeladen ist, auf Menschen gerichtet werden?",
+        optionen: [
+          { key: "a", text: "Niemals" },
+          { key: "b", text: "Ja" },
+          { key: "c", text: "Nein, außer bei Notwehr." }
+        ],
+        loesung: ["C"], musterantwort: "Laut offiziellem BVA-Katalog: Nein, außer bei Notwehr."
+      },
+      {
+        id: "III.08", kapitel: "Kapitel III", themengebiet: "Handhabung von Schusswaffen und Munition", typ: "Freitext",
+        frage: "Nennen Sie mindestens fünf Grundregeln zum Umgang mit einer Schusswaffe, die Sie unbedingt beachten müssen!", optionen: [], loesung: [],
+        musterantwort: "1. Immer als geladen betrachten, 2. Nie auf Personen richten, 3. Nur in sichere Richtung laden/entladen, 4. Geladene Waffe nicht aus der Hand legen, 5. Standaufsicht Folge leisten."
+      },
+      {
+        id: "III.37", kapitel: "Kapitel III", themengebiet: "Handhabung von Schusswaffen und Munition", typ: "Multiple Choice",
+        frage: "Eine halbautomatische Pistole entlade ich, indem ich…",
+        optionen: [
+          { key: "a", text: "den Verschluss öffne und das Magazin entleere." },
+          { key: "b", text: "den Verschluss öffne, Patronenlager entferne..." },
+          { key: "c", text: "das Magazin entnehme, den Verschluss öffne und das Patronenlager entleere." }
+        ],
+        loesung: ["C"], musterantwort: "Sicherheitsreihenfolge: Zuerst Magazin entnehmen, dann Verschluss öffnen und Patronenlager prüfen."
+      },
+
+      // 8. Signalmittel
+      {
+        id: "IV.01", kapitel: "Kapitel IV", themengebiet: "Not- und Seenotsignalmittel", typ: "Freitext",
+        frage: "Was versteht man unter pyrotechnischen Seenotsignalen?", optionen: [], loesung: [],
+        musterantwort: "Notsignale, die mit Hilfe explosionsgefährlicher Stoffe ausgelöst werden."
+      },
+      {
+        id: "IV.12", kapitel: "Kapitel IV", themengebiet: "Not- und Seenotsignalmittel", typ: "Multiple Choice",
+        frage: "Welche Farbe ist bei Signalraketen international als Notsignal zu verwenden?",
+        optionen: [
+          { key: "a", text: "Rot" },
+          { key: "b", text: "Weiß" },
+          { key: "c", text: "Grün" }
+        ],
+        loesung: ["A"], musterantwort: "Rot ist das international verbindliche Seenotsignal."
+      },
+      {
+        id: "IV.55", kapitel: "Kapitel IV", themengebiet: "Not- und Seenotsignalmittel", typ: "Multiple Choice",
+        frage: "Was bedeutet die Zahl „4“ bei der Kaliberangabe der Signalpistole?",
+        optionen: [
+          { key: "a", text: "Hülsenlänge beträgt 4 Zoll." },
+          { key: "b", text: "Geschossdurchmesser beträgt 4 cm." },
+          { key: "c", text: "Bezeichnet 4 Bleikugeln vom Laufdurchmesser auf 1 englisches Pfund Blei (ca. 26,5 mm)." }
+        ],
+        loesung: ["C"], musterantwort: "Kaliber 4 = 26,5 mm Laufinnendurchmesser."
+      }
+    ];
+
+    /* -------------------------------------------------------------
+       3. STATE & LOKALER SPEICHER (OHNE ACCOUNT)
+       ------------------------------------------------------------- */
+    let catalog = [];
+    let progress = {}; // { [qid]: { correctCount, wrongCount, lastResult: 'correct'|'wrong', bookmarked: bool } }
+    let config = {
+      order: 'random',          // 'catalog' | 'random'
+      batchSize: '20',          // '10' | '20' | '30' | '50' | 'all'
+      repeatWrong: true         // bool
+    };
+
+    let selectedTopicId = null; // null = global
+    let activeFilterMode = "unanswered"; // "unanswered"|"wrong"|"rare"|"marked"|"all"
+
+    // Trainer Session State
+    let sessionQuestions = [];
+    let sessionIndex = 0;
+    let sessionWrongQueue = [];
+    let currentSelectedOptions = new Set();
+    let isCurrentChecked = false;
+    let isExamSession = false;
+    let examScore = { correct: 0, total: 0, wrongQuestions: [] };
+
+    function initApp() {
+      loadSettings();
+      loadProgress();
+      loadCatalog();
+      renderHomeScreen();
+      lucide.createIcons();
+    }
+
+    function loadSettings() {
+      try {
+        const saved = localStorage.getItem("wsk_config");
+        if (saved) config = { ...config, ...JSON.parse(saved) };
+      } catch (e) {}
+      
+      document.getElementById("cfgOrder").value = config.order;
+      document.getElementById("cfgBatchSize").value = config.batchSize;
+      document.getElementById("cfgRepeatWrong").checked = !!config.repeatWrong;
+    }
+
+    function saveSettings() {
+      config.order = document.getElementById("cfgOrder").value;
+      config.batchSize = document.getElementById("cfgBatchSize").value;
+      config.repeatWrong = document.getElementById("cfgRepeatWrong").checked;
+      localStorage.setItem("wsk_config", JSON.stringify(config));
+    }
+
+    function loadProgress() {
+      try {
+        const p = localStorage.getItem("wsk_progress");
+        progress = p ? JSON.parse(p) : {};
+      } catch (e) {
+        progress = {};
+      }
+    }
+
+    function saveProgress() {
+      localStorage.setItem("wsk_progress", JSON.stringify(progress));
+      renderHomeScreen();
+    }
+
+    function loadCatalog() {
+      try {
+        const stored = localStorage.getItem("wsk_full_catalog");
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 20) {
+            catalog = parsed;
+            updateCatalogBadge(parsed.length, true);
+            return;
+          }
+        }
+      } catch (e) {}
+      
+      catalog = EMBEDDED_SAMPLE_QUESTIONS;
+      updateCatalogBadge(catalog.length, false);
+    }
+
+    function updateCatalogBadge(count, isFull) {
+      const badge = document.getElementById("headerCatalogBadge");
+      const stat = document.getElementById("settingsCatalogStatus");
+      if (isFull) {
+        badge.textContent = `${count} Fragen (Voll)`;
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+        stat.textContent = `${count} Fragen (Vollkatalog)`;
+      } else {
+        badge.textContent = `${count} Basis-Fragen`;
+        badge.className = "text-xs px-2.5 py-0.5 rounded-full font-medium bg-amber-500/20 text-amber-300 border border-amber-500/40";
+        stat.textContent = `${count} Fragen (Basis-Stamm)`;
+      }
+    }
+
+    /* -------------------------------------------------------------
+       4. HOMESCREEN RENDERING
+       ------------------------------------------------------------- */
+    function renderHomeScreen() {
+      const total = catalog.length;
+      let correct = 0;
+      let wrong = 0;
+
+      catalog.forEach(q => {
+        const stat = progress[q.id];
+        if (stat) {
+          if (stat.lastResult === 'correct') correct++;
+          else if (stat.lastResult === 'wrong') wrong++;
+        }
+      });
+
+      const unanswered = Math.max(0, total - (correct + wrong));
+
+      // Fortschrittskasten
+      document.getElementById("progressStatsText").textContent = `${correct + wrong} / ${total}`;
+      document.getElementById("countCorrect").textContent = correct;
+      document.getElementById("countWrong").textContent = wrong;
+      document.getElementById("countUnanswered").textContent = unanswered;
+
+      const pCorrect = total > 0 ? (correct / total) * 100 : 0;
+      const pWrong = total > 0 ? (wrong / total) * 100 : 0;
+      document.getElementById("barCorrect").style.width = `${pCorrect}%`;
+      document.getElementById("barWrong").style.width = `${pWrong}%`;
+
+      // 2-Spalten-Grid der Sachgebiete
+      const grid = document.getElementById("gridTopics");
+      grid.innerHTML = "";
+
+      TOPIC_CONFIG.forEach(t => {
+        const topicQuestions = catalog.filter(q => q.themengebiet === t.id);
+        const tTotal = topicQuestions.length;
+        let tCorrect = 0;
+        let tWrong = 0;
+
+        topicQuestions.forEach(q => {
+          const s = progress[q.id];
+          if (s) {
+            if (s.lastResult === 'correct') tCorrect++;
+            else if (s.lastResult === 'wrong') tWrong++;
+          }
+        });
+
+        const pct = tTotal > 0 ? Math.round(((tCorrect + tWrong) / tTotal) * 100) : 0;
+
+        const tile = document.createElement("button");
+        tile.className = `p-3 rounded-2xl bg-gradient-to-br ${t.color} border ${t.border} text-left flex flex-col justify-between shadow-sm active:scale-95 transition h-24`;
+        tile.innerHTML = `
+          <div class="space-y-0.5">
+            <div class="text-[10px] text-white/60 font-semibold uppercase tracking-wider">${tTotal} Fragen</div>
+            <div class="font-bold text-xs text-white leading-tight line-clamp-2">${t.title}</div>
+          </div>
+          <div class="w-full space-y-1">
+            <div class="flex justify-between text-[10px] text-white/70">
+              <span>${tCorrect} richtig</span>
+              <span>${pct}%</span>
+            </div>
+            <div class="w-full h-1.5 bg-black/30 rounded-full overflow-hidden flex">
+              <div class="h-full bg-emerald-400" style="width: ${tTotal > 0 ? (tCorrect / tTotal) * 100 : 0}%"></div>
+              <div class="h-full bg-rose-400" style="width: ${tTotal > 0 ? (tWrong / tTotal) * 100 : 0}%"></div>
+            </div>
+          </div>
+        `;
+        tile.onclick = () => openQuarterModal(t.id);
+        grid.appendChild(tile);
+      });
+    }
+
+    /* -------------------------------------------------------------
+       5. POP-UP 1: THEMEN-DETAIL (1/4)
+       ------------------------------------------------------------- */
+    function openQuarterModal(topicId) {
+      selectedTopicId = topicId;
+      const topicConf = TOPIC_CONFIG.find(t => t.id === topicId);
+      document.getElementById("quarterTopicTitle").textContent = topicConf ? topicConf.title : topicId;
+
+      const questions = catalog.filter(q => q.themengebiet === topicId);
+      const total = questions.length;
+      let correct = 0;
+      let wrong = 0;
+
+      questions.forEach(q => {
+        const s = progress[q.id];
+        if (s) {
+          if (s.lastResult === 'correct') correct++;
+          else if (s.lastResult === 'wrong') wrong++;
+        }
+      });
+      const unanswered = Math.max(0, total - (correct + wrong));
+
+      document.getElementById("quarterProgressNumbers").textContent = `${correct + wrong} / ${total}`;
+      document.getElementById("quarterCountUnanswered").textContent = unanswered;
+      document.getElementById("quarterBarCorrect").style.width = `${total > 0 ? (correct / total) * 100 : 0}%`;
+      document.getElementById("quarterBarWrong").style.width = `${total > 0 ? (wrong / total) * 100 : 0}%`;
+
+      document.getElementById("modalQuarter").classList.remove("hidden");
+      lucide.createIcons();
+    }
+
+    function closeQuarterModal() {
+      document.getElementById("modalQuarter").classList.add("hidden");
+    }
+
+    /* -------------------------------------------------------------
+       6. POP-UP 2: FILTER & AUSWAHL (1/2)
+       ------------------------------------------------------------- */
+    function openHalfModal(fromTopic = false) {
+      if (!fromTopic) selectedTopicId = null;
+      document.getElementById("modalQuarter").classList.add("hidden");
+      renderHalfModalFilters();
+      document.getElementById("modalHalf").classList.remove("hidden");
+      lucide.createIcons();
+    }
+
+    function closeHalfModal() {
+      document.getElementById("modalHalf").classList.add("hidden");
+    }
+
+    function renderHalfModalFilters() {
+      const type = document.getElementById("selectQuestionType").value;
+      let pool = catalog;
+      if (selectedTopicId) pool = pool.filter(q => q.themengebiet === selectedTopicId);
+      if (type === "mc") pool = pool.filter(q => q.typ === "Multiple Choice");
+      if (type === "text") pool = pool.filter(q => q.typ === "Freitext");
+
+      let cUnanswered = 0, cWrong = 0, cRare = 0, cMarked = 0;
+      pool.forEach(q => {
+        const s = progress[q.id] || {};
+        if (!s.lastResult) cUnanswered++;
+        if (s.lastResult === 'wrong') cWrong++;
+        if (s.correctCount === 1 && s.lastResult === 'correct') cRare++;
+        if (s.bookmarked) cMarked++;
+      });
+
+      const items = [
+        { id: "unanswered", label: "Unbeantwortete Fragen", count: cUnanswered, icon: "circle-dashed" },
+        { id: "wrong", label: "Falsch beantwortete Fragen", count: cWrong, icon: "x-circle" },
+        { id: "rare", label: "Selten richtig beantwortet", count: cRare, icon: "help-circle" },
+        { id: "marked", label: "Markierte / Gemerkte Karten", count: cMarked, icon: "bookmark" },
+        { id: "all", label: "Alle verfügbaren Fragen", count: pool.length, icon: "layers" }
+      ];
+
+      const container = document.getElementById("filterStatusOptions");
+      container.innerHTML = "";
+
+      items.forEach(it => {
+        const isActive = activeFilterMode === it.id;
+        const div = document.createElement("button");
+        div.className = `w-full p-2.5 rounded-xl border flex items-center justify-between text-left transition ${
+          isActive 
+            ? 'bg-sky-500/20 border-sky-500 text-sky-200' 
+            : 'bg-slate-800/80 border-slate-700/80 text-slate-300 hover:border-slate-600'
+        }`;
+        div.innerHTML = `
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="${it.icon}" class="w-4 h-4 text-sky-400"></i>
+            <span class="font-medium text-xs">${it.label}</span>
+          </div>
+          <span class="text-xs font-bold px-2 py-0.5 rounded-full ${isActive ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-300'}">
+            ${it.count}
+          </span>
+        `;
+        div.onclick = () => {
+          activeFilterMode = it.id;
+          renderHalfModalFilters();
+        };
+        container.appendChild(div);
+      });
+
+      const activeObj = items.find(i => i.id === activeFilterMode);
+      document.getElementById("filterMatchingCount").textContent = activeObj ? activeObj.count : 0;
+      lucide.createIcons();
+    }
+
+    function closeSettingsModal() {
+      saveSettings();
+      document.getElementById("modalSettings").classList.add("hidden");
+    }
+
+    /* -------------------------------------------------------------
+       7. TRAINER SESSION ENGINE
+       ------------------------------------------------------------- */
+    function startLearning(filterMode = null, topicId = null, forcedQuestions = null, isExam = false) {
+      isExamSession = isExam;
+      sessionWrongQueue = [];
+
+      if (forcedQuestions) {
+        sessionQuestions = [...forcedQuestions];
+      } else {
+        const type = document.getElementById("selectQuestionType") ? document.getElementById("selectQuestionType").value : "all";
+        let pool = catalog;
+        if (topicId) pool = pool.filter(q => q.themengebiet === topicId);
+        if (type === "mc") pool = pool.filter(q => q.typ === "Multiple Choice");
+        if (type === "text") pool = pool.filter(q => q.typ === "Freitext");
+
+        if (filterMode === "unanswered") {
+          pool = pool.filter(q => !progress[q.id] || !progress[q.id].lastResult);
+        } else if (filterMode === "wrong") {
+          pool = pool.filter(q => progress[q.id] && progress[q.id].lastResult === 'wrong');
+        } else if (filterMode === "rare") {
+          pool = pool.filter(q => progress[q.id] && progress[q.id].correctCount === 1);
+        } else if (filterMode === "marked") {
+          pool = pool.filter(q => progress[q.id] && progress[q.id].bookmarked);
+        }
+
+        if (pool.length === 0) {
+          alert("Keine passenden Fragen für diese Auswahl gefunden.");
+          return;
+        }
+
+        // Reihenfolge-Einstellung anwenden
+        if (config.order === 'random') {
+          pool.sort(() => 0.5 - Math.random());
+        } else {
+          pool.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true, sensitivity: 'base' }));
+        }
+
+        // Kartenzahl pro Durchgang anwenden
+        if (!isExam && config.batchSize !== 'all') {
+          const limit = parseInt(config.batchSize, 10);
+          if (!isNaN(limit)) pool = pool.slice(0, limit);
+        }
+
+        sessionQuestions = pool;
+      }
+
+      if (sessionQuestions.length === 0) {
+        alert("Keine Fragen vorhanden.");
+        return;
+      }
+
+      sessionIndex = 0;
+      if (isExamSession) {
+        examScore = { correct: 0, total: sessionQuestions.length, wrongQuestions: [] };
+        document.getElementById("trainerModeBadge").textContent = "Prüfungssimulation";
+      } else {
+        document.getElementById("trainerModeBadge").textContent = "Lernmodus";
+      }
+
+      closeQuarterModal();
+      closeHalfModal();
+      document.getElementById("viewTrainer").classList.remove("hidden");
+      renderTrainerQuestion();
+    }
+
+    function renderTrainerQuestion() {
+      isCurrentChecked = false;
+      currentSelectedOptions.clear();
+
+      const q = sessionQuestions[sessionIndex];
+      const total = sessionQuestions.length;
+
+      document.getElementById("trainerCounter").textContent = `Frage ${sessionIndex + 1} von ${total}`;
+      document.getElementById("trainerQuestionId").textContent = q.id;
+      document.getElementById("trainerQuestionTopic").textContent = q.themengebiet;
+      document.getElementById("trainerQuestionText").textContent = q.frage;
+
+      // Bookmark
+      const isBookmarked = progress[q.id] && progress[q.id].bookmarked;
+      const bIcon = document.getElementById("bookmarkIcon");
+      if (isBookmarked) {
+        bIcon.classList.add("fill-amber-400", "text-amber-400");
+      } else {
+        bIcon.classList.remove("fill-amber-400", "text-amber-400");
+      }
+
+      const optContainer = document.getElementById("containerOptions");
+      const freeContainer = document.getElementById("containerFreeText");
+      const btnAction = document.getElementById("btnCheckOrNext");
+
+      if (q.typ === "Multiple Choice") {
+        optContainer.classList.remove("hidden");
+        freeContainer.classList.add("hidden");
+        btnAction.textContent = "Antwort überprüfen";
+        btnAction.className = "w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 active:bg-sky-700 font-bold text-white text-sm shadow-lg shadow-sky-900/30 transition";
+
+        optContainer.innerHTML = "";
+        q.optionen.forEach(opt => {
+          const btn = document.createElement("button");
+          btn.dataset.key = opt.key.toUpperCase();
+          btn.className = "w-full p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 flex items-start gap-3 text-left transition select-none active:scale-[0.99]";
+          btn.innerHTML = `
+            <div class="box-indicator w-5 h-5 rounded border border-slate-600 bg-slate-900/60 flex items-center justify-center flex-none mt-0.5 transition">
+              <span class="check-symbol text-xs font-black hidden"></span>
+            </div>
+            <div class="text-xs sm:text-sm text-slate-200 leading-snug flex-1">
+              <strong class="text-sky-400 uppercase mr-1">${opt.key})</strong> ${opt.text}
+            </div>
+          `;
+          btn.onclick = () => toggleSelectOption(opt.key.toUpperCase());
+          optContainer.appendChild(btn);
+        });
+      } else {
+        // Freitext
+        optContainer.classList.add("hidden");
+        freeContainer.classList.remove("hidden");
+        document.getElementById("boxRevealedAnswer").classList.add("hidden");
+        document.getElementById("trainerMusterText").textContent = q.musterantwort || "Keine Musterantwort hinterlegt.";
+        btnAction.textContent = "Weiter";
+        btnAction.className = "w-full py-3.5 rounded-xl bg-slate-800 text-slate-400 font-bold text-sm cursor-not-allowed";
+      }
+
+      lucide.createIcons();
+    }
+
+    function toggleSelectOption(key) {
+      if (isCurrentChecked) return;
+
+      if (currentSelectedOptions.has(key)) {
+        currentSelectedOptions.delete(key);
+      } else {
+        currentSelectedOptions.add(key);
+      }
+
+      // Beim Auswählen: Kästchen füllt sich satt grau aus
+      const buttons = document.querySelectorAll("#containerOptions button");
+      buttons.forEach(btn => {
+        const k = btn.dataset.key;
+        const box = btn.querySelector(".box-indicator");
+        if (currentSelectedOptions.has(k)) {
+          btn.classList.add("border-slate-400", "bg-slate-800");
+          box.classList.remove("bg-slate-900/60", "border-slate-600");
+          box.classList.add("bg-slate-400", "border-slate-300");
+        } else {
+          btn.classList.remove("border-slate-400", "bg-slate-800");
+          box.classList.add("bg-slate-900/60", "border-slate-600");
+          box.classList.remove("bg-slate-400", "border-slate-300");
+        }
+      });
+    }
+
+    function checkAnswer() {
+      const q = sessionQuestions[sessionIndex];
+      isCurrentChecked = true;
+
+      const userAnswers = Array.from(currentSelectedOptions).sort();
+      const correctAnswers = [...q.loesung].map(k => k.toUpperCase()).sort();
+
+      const isAllCorrect = userAnswers.length === correctAnswers.length &&
+                           userAnswers.every((val, idx) => val === correctAnswers[idx]);
+
+      // Auswertung:
+      // Bei korrekt: grünes Kreuz (✕) und kräftige grüne Umrandung
+      // Bei falsch gewählt: rotes Kreuz (✕) und rote Umrandung
+      const buttons = document.querySelectorAll("#containerOptions button");
+      buttons.forEach(btn => {
+        const k = btn.dataset.key;
+        const box = btn.querySelector(".box-indicator");
+        const symbol = btn.querySelector(".check-symbol");
+
+        const wasChosen = currentSelectedOptions.has(k);
+        const shouldBeChosen = correctAnswers.includes(k);
+
+        box.classList.remove("bg-slate-400", "border-slate-300", "bg-slate-900/60", "border-slate-600");
+
+        if (wasChosen && shouldBeChosen) {
+          // Richtig gewählt -> GRÜNES KREUZ + GRÜNE UMRANDUNG
+          btn.className = "w-full p-3.5 rounded-xl border-2 border-emerald-500 bg-emerald-950/30 flex items-start gap-3 text-left";
+          box.className = "w-5 h-5 rounded border border-emerald-500 bg-emerald-500/20 flex items-center justify-center flex-none mt-0.5 text-emerald-400";
+          symbol.textContent = "✕";
+          symbol.classList.remove("hidden");
+        } else if (wasChosen && !shouldBeChosen) {
+          // Falsch gewählt -> ROTES KREUZ + ROTE UMRANDUNG
+          btn.className = "w-full p-3.5 rounded-xl border-2 border-rose-500 bg-rose-950/30 flex items-start gap-3 text-left";
+          box.className = "w-5 h-5 rounded border border-rose-500 bg-rose-500/20 flex items-center justify-center flex-none mt-0.5 text-rose-400";
+          symbol.textContent = "✕";
+          symbol.classList.remove("hidden");
+        } else if (!wasChosen && shouldBeChosen) {
+          // Vergessen -> Gestrichelt grün hervorgehoben
+          btn.className = "w-full p-3.5 rounded-xl border-2 border-dashed border-emerald-500/60 bg-emerald-950/10 flex items-start gap-3 text-left";
+          box.className = "w-5 h-5 rounded border border-emerald-500/60 bg-transparent flex items-center justify-center flex-none mt-0.5 text-emerald-400/80";
+          symbol.textContent = "✕";
+          symbol.classList.remove("hidden");
+        }
+      });
+
+      recordQuestionResult(q.id, isAllCorrect);
+
+      if (isExamSession) {
+        if (isAllCorrect) {
+          examScore.correct++;
+        } else {
+          examScore.wrongQuestions.push(q);
+        }
+      } else {
+        if (!isAllCorrect && config.repeatWrong) {
+          sessionWrongQueue.push(q);
+        }
+      }
+
+      const btnAction = document.getElementById("btnCheckOrNext");
+      btnAction.textContent = (sessionIndex < sessionQuestions.length - 1 || sessionWrongQueue.length > 0) ? "Nächste Frage" : "Durchgang abschließen";
+      btnAction.className = "w-full py-3.5 rounded-xl bg-slate-700 hover:bg-slate-600 font-bold text-white text-sm shadow-md transition";
+    }
+
+    function recordQuestionResult(qid, isCorrect) {
+      if (!progress[qid]) {
+        progress[qid] = { correctCount: 0, wrongCount: 0, lastResult: null, bookmarked: false };
+      }
+      if (isCorrect) {
+        progress[qid].correctCount = (progress[qid].correctCount || 0) + 1;
+        progress[qid].lastResult = 'correct';
+      } else {
+        progress[qid].wrongCount = (progress[qid].wrongCount || 0) + 1;
+        progress[qid].lastResult = 'wrong';
+      }
+      saveProgress();
+    }
+
+    function advanceToNextQuestion() {
+      sessionIndex++;
+      if (sessionIndex < sessionQuestions.length) {
+        renderTrainerQuestion();
+      } else if (sessionWrongQueue.length > 0) {
+        // Falsche Fragen am Ende wiederholen
+        sessionQuestions = [...sessionWrongQueue];
+        sessionWrongQueue = [];
+        sessionIndex = 0;
+        alert("Wiederholungsrunde: Falsch beantwortete Fragen werden nun erneut abgefragt!");
+        renderTrainerQuestion();
+      } else {
+        finishSession();
+      }
+    }
+
+    function finishSession() {
+      document.getElementById("viewTrainer").classList.add("hidden");
+      if (isExamSession) {
+        showExamResultModal();
+      } else {
+        renderHomeScreen();
+      }
+    }
+
+    function showExamResultModal() {
+      const pct = Math.round((examScore.correct / examScore.total) * 100);
+      const passed = pct >= 80;
+
+      const iconBox = document.getElementById("examBadgeIcon");
+      const title = document.getElementById("examResultTitle");
+      const score = document.getElementById("examScoreText");
+      const pts = document.getElementById("examPointsText");
+      const btnRepeat = document.getElementById("btnExamRepeatWrong");
+
+      score.textContent = `${pct} %`;
+      pts.textContent = `${examScore.correct} von ${examScore.total} Fragen richtig`;
+
+      if (passed) {
+        iconBox.className = "w-16 h-16 rounded-full mx-auto flex items-center justify-center bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+        iconBox.innerHTML = '<i data-lucide="check" class="w-8 h-8"></i>';
+        title.textContent = "Prüfung bestanden!";
+        title.className = "text-xl font-extrabold text-emerald-400";
+      } else {
+        iconBox.className = "w-16 h-16 rounded-full mx-auto flex items-center justify-center bg-rose-500/20 text-rose-400 border border-rose-500/40";
+        iconBox.innerHTML = '<i data-lucide="x" class="w-8 h-8"></i>';
+        title.textContent = "Nicht bestanden";
+        title.className = "text-xl font-extrabold text-rose-400";
+      }
+
+      if (examScore.wrongQuestions.length > 0) {
+        btnRepeat.classList.remove("hidden");
+        btnRepeat.onclick = () => {
+          document.getElementById("modalExamResult").classList.add("hidden");
+          startLearning(null, null, examScore.wrongQuestions, false);
+        };
+      } else {
+        btnRepeat.classList.add("hidden");
+      }
+
+      document.getElementById("modalExamResult").classList.remove("hidden");
+      lucide.createIcons();
+    }
+
+    /* -------------------------------------------------------------
+       8. EVENT LISTENERS
+       ------------------------------------------------------------- */
+    document.addEventListener("DOMContentLoaded", () => {
+      initApp();
+
+      // Settings Modal
+      document.getElementById("btnOpenSettings").onclick = () => {
+        document.getElementById("modalSettings").classList.remove("hidden");
+        lucide.createIcons();
+      };
+      document.getElementById("btnCloseSettings").onclick = closeSettingsModal;
+
+      document.getElementById("cfgOrder").onchange = saveSettings;
+      document.getElementById("cfgBatchSize").onchange = saveSettings;
+      document.getElementById("cfgRepeatWrong").onchange = saveSettings;
+
+      // Start Learning Global
+      document.getElementById("btnStartLearningGlobal").onclick = () => {
+        startLearning("unanswered", null);
+      };
+      document.getElementById("btnOpenGlobalFilter").onclick = () => {
+        openHalfModal(false);
+      };
+
+      // Start Exam (100 Zufallsfragen)
+      document.getElementById("btnStartExam").onclick = () => {
+        let pool = catalog.filter(q => q.typ === "Multiple Choice");
+        pool.sort(() => 0.5 - Math.random());
+        const examQuestions = pool.slice(0, 100);
+        startLearning(null, null, examQuestions, true);
+      };
+
+      // Modals Close
+      document.getElementById("btnCloseQuarter").onclick = closeQuarterModal;
+      document.getElementById("btnCloseHalf").onclick = closeHalfModal;
+
+      // Quarter Actions
+      document.getElementById("btnQuarterStartLearn").onclick = () => {
+        startLearning("unanswered", selectedTopicId);
+      };
+      document.getElementById("btnQuarterOpenFilter").onclick = () => {
+        openHalfModal(true);
+      };
+
+      // Half Filter Type Change
+      document.getElementById("selectQuestionType").onchange = renderHalfModalFilters;
+      document.getElementById("btnApplyFilterAndStart").onclick = () => {
+        startLearning(activeFilterMode, selectedTopicId);
+      };
+
+      // Trainer Actions
+      document.getElementById("btnExitTrainer").onclick = () => {
+        if (confirm("Möchtest du die aktuelle Lerneinheit wirklich beenden?")) {
+          document.getElementById("viewTrainer").classList.add("hidden");
+          renderHomeScreen();
+        }
+      };
+
+      document.getElementById("btnToggleBookmark").onclick = () => {
+        const q = sessionQuestions[sessionIndex];
+        if (!progress[q.id]) progress[q.id] = { correctCount: 0, wrongCount: 0, lastResult: null, bookmarked: false };
+        progress[q.id].bookmarked = !progress[q.id].bookmarked;
+        saveProgress();
+        const bIcon = document.getElementById("bookmarkIcon");
+        if (progress[q.id].bookmarked) {
+          bIcon.classList.add("fill-amber-400", "text-amber-400");
+        } else {
+          bIcon.classList.remove("fill-amber-400", "text-amber-400");
+        }
+      };
+
+      document.getElementById("btnCheckOrNext").onclick = () => {
+        const q = sessionQuestions[sessionIndex];
+        if (q.typ === "Multiple Choice") {
+          if (!isCurrentChecked) {
+            if (currentSelectedOptions.size === 0) {
+              alert("Bitte wähle mindestens eine Antwort aus.");
+              return;
+            }
+            checkAnswer();
+          } else {
+            advanceToNextQuestion();
+          }
+        } else {
+          if (isCurrentChecked) {
+            advanceToNextQuestion();
+          }
+        }
+      };
+
+      // Freitext Selbstkontrolle
+      document.getElementById("btnRevealAnswer").onclick = () => {
+        document.getElementById("boxRevealedAnswer").classList.remove("hidden");
+      };
+      document.getElementById("btnRateSelfWrong").onclick = () => {
+        const q = sessionQuestions[sessionIndex];
+        recordQuestionResult(q.id, false);
+        if (config.repeatWrong && !isExamSession) sessionWrongQueue.push(q);
+        isCurrentChecked = true;
+        advanceToNextQuestion();
+      };
+      document.getElementById("btnRateSelfCorrect").onclick = () => {
+        const q = sessionQuestions[sessionIndex];
+        recordQuestionResult(q.id, true);
+        isCurrentChecked = true;
+        advanceToNextQuestion();
+      };
+
+      // Exam Modal Close
+      document.getElementById("btnExamClose").onclick = () => {
+        document.getElementById("modalExamResult").classList.add("hidden");
+        renderHomeScreen();
+      };
+
+      // JSON Import
+      document.getElementById("btnTriggerFileImport").onclick = () => {
+        document.getElementById("fileJsonInput").click();
+      };
+
+      document.getElementById("fileJsonInput").onchange = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          try {
+            const data = JSON.parse(evt.target.result);
+            if (!Array.isArray(data) || data.length === 0 || !data[0].frage) {
+              alert("Ungültiges Format. Bitte wähle eine gültige Waffensachkunde-JSON-Datei.");
+              return;
+            }
+            localStorage.setItem("wsk_full_catalog", JSON.stringify(data));
+            catalog = data;
+            updateCatalogBadge(catalog.length, true);
+            renderHomeScreen();
+            alert(`Erfolg! ${data.length} Fragen wurden importiert.`);
+            document.getElementById("modalSettings").classList.add("hidden");
+          } catch (err) {
+            alert("Fehler beim Lesen der JSON-Datei: " + err.message);
+          }
+        };
+        reader.readAsText(file);
+      };
+
+      // Reset Progress
+      document.getElementById("btnResetProgress").onclick = () => {
+        if (confirm("Möchtest du wirklich deinen gesamten bisherigen Lernfortschritt auf diesem Gerät löschen?")) {
+          progress = {};
+          localStorage.removeItem("wsk_progress");
+          renderHomeScreen();
+          alert("Lernfortschritt wurde zurückgesetzt.");
+          document.getElementById("modalSettings").classList.add("hidden");
+        }
+      };
+    });
+  </script>
+</body>
+</html>
