@@ -348,21 +348,40 @@
         <!-- Rendered via JS -->
       </div>
 
-      <!-- Free Text / Musterantwort Container -->
+      <!-- Free Text / Musterantwort Container mit Textarea & Prüflogik -->
       <div id="containerFreeText" class="space-y-3 hidden">
-        <button id="btnRevealAnswer" class="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sky-400 font-semibold text-sm flex items-center justify-center gap-2">
-          <i data-lucide="eye" class="w-4 h-4"></i>
-          <span>Musterantwort aufdecken</span>
-        </button>
-        <div id="boxRevealedAnswer" class="hidden bg-slate-800/90 rounded-2xl p-4 border border-slate-700 space-y-3">
-          <div class="text-xs font-bold text-amber-400 uppercase tracking-wide">Amtliche BVA-Musterantwort</div>
-          <p id="trainerMusterText" class="text-sm text-slate-200 leading-relaxed"></p>
-          <div class="flex items-center gap-2 pt-2 border-t border-slate-700">
-            <button id="btnRateSelfWrong" class="flex-1 py-2.5 rounded-xl bg-rose-600/20 text-rose-300 border border-rose-500/30 text-xs font-bold active:scale-95">
-              Wusste ich nicht
-            </button>
-            <button id="btnRateSelfCorrect" class="flex-1 py-2.5 rounded-xl bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold active:scale-95">
-              Gewusst
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+            <span>Deine Antwortformulierung:</span>
+            <span id="textCharCount" class="text-[11px] text-slate-500 font-normal">0 Zeichen</span>
+          </label>
+          <textarea id="inputFreeTextAnswer" rows="4" 
+            placeholder="Antwort hier präzise eingeben (z. B. Definition, Rechtsbegriffe, Pflichten)..."
+            class="w-full bg-slate-800/90 border border-slate-700 rounded-2xl p-3.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 leading-relaxed transition"></textarea>
+        </div>
+
+        <!-- Auswertungs-Box nach Überprüfung -->
+        <div id="boxRevealedAnswer" class="hidden rounded-2xl p-4 border space-y-3 animate-slide-up">
+          <div class="flex items-center gap-2" id="textResultHeader">
+            <span id="textResultIcon" class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"></span>
+            <span id="textResultStatus" class="text-sm font-bold"></span>
+          </div>
+
+          <div class="space-y-2 pt-1 text-xs">
+            <div>
+              <span class="font-semibold text-slate-400">Amtliche BVA-Musterantwort:</span>
+              <p id="trainerMusterText" class="text-slate-200 mt-1 p-2.5 bg-slate-900/60 rounded-xl border border-slate-700/60 leading-relaxed"></p>
+            </div>
+            <div id="boxMissingKeywords" class="hidden text-amber-300 bg-amber-950/20 border border-amber-800/40 p-2.5 rounded-xl">
+              <span class="font-semibold">Fehlende Kernbegriffe:</span>
+              <span id="labelMissingWords" class="block mt-0.5 text-amber-200 font-mono text-[11px]"></span>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-slate-700/60 flex items-center justify-between gap-2">
+            <span class="text-[11px] text-slate-400">Sinngemäß richtig erfasst?</span>
+            <button id="btnManualOverrideCorrect" class="py-1.5 px-3 rounded-lg bg-emerald-600/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold hover:bg-emerald-600/30 active:scale-95 transition">
+              Dennoch als richtig werten
             </button>
           </div>
         </div>
@@ -1102,10 +1121,17 @@
         // Freitext
         optContainer.classList.add("hidden");
         freeContainer.classList.remove("hidden");
+        
+        const txtArea = document.getElementById("inputFreeTextAnswer");
+        txtArea.value = "";
+        txtArea.disabled = false;
+        txtArea.className = "w-full bg-slate-800/90 border border-slate-700 rounded-2xl p-3.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 leading-relaxed transition";
+        document.getElementById("textCharCount").textContent = "0 Zeichen";
+        
         document.getElementById("boxRevealedAnswer").classList.add("hidden");
         document.getElementById("trainerMusterText").textContent = q.musterantwort || "Keine Musterantwort hinterlegt.";
-        btnAction.textContent = "Weiter";
-        btnAction.className = "w-full py-3.5 rounded-xl bg-slate-800 text-slate-400 font-bold text-sm cursor-not-allowed";
+        btnAction.textContent = "Antwort überprüfen";
+        btnAction.className = "w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 active:bg-sky-700 font-bold text-white text-sm shadow-lg shadow-sky-900/30 transition";
       }
 
       lucide.createIcons();
@@ -1192,6 +1218,119 @@
         }
       } else {
         if (!isAllCorrect && config.repeatWrong) {
+          sessionWrongQueue.push(q);
+        }
+      }
+
+      const btnAction = document.getElementById("btnCheckOrNext");
+      btnAction.textContent = (sessionIndex < sessionQuestions.length - 1 || sessionWrongQueue.length > 0) ? "Nächste Frage" : "Durchgang abschließen";
+      btnAction.className = "w-full py-3.5 rounded-xl bg-slate-700 hover:bg-slate-600 font-bold text-white text-sm shadow-md transition";
+    }
+
+    /* -------------------------------------------------------------
+       TEXT EVALUATION ENGINE (FREITEXT-VALIDIERUNG)
+       ------------------------------------------------------------- */
+    function normalizeGermanText(str) {
+      if (!str) return "";
+      return str
+        .toLowerCase()
+        .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function extractKeyKeywords(musterText) {
+      const stopWords = new Set([
+        "der", "die", "das", "ein", "eine", "einer", "eines", "einem", "einen", "und", "oder", "aber", "mit", "von",
+        "zu", "zum", "zur", "in", "im", "aus", "auf", "unter", "durch", "fuer", "über", "ueber", "den", "dem", "des",
+        "ist", "sind", "wird", "werden", "hat", "haben", "kann", "koennen", "nicht", "nur", "dass", "wenn", "wie",
+        "auch", "dies", "diese", "dieser", "jedoch", "sowie", "insbesondere", "so", "als", "nach", "bei", "bzw"
+      ]);
+
+      const words = normalizeGermanText(musterText).split(" ");
+      const filtered = words.filter(w => w.length > 3 && !stopWords.has(w));
+      return Array.from(new Set(filtered));
+    }
+
+    function checkFreeTextAnswer() {
+      const q = sessionQuestions[sessionIndex];
+      const txtArea = document.getElementById("inputFreeTextAnswer");
+      const userText = txtArea.value.trim();
+
+      if (!userText) {
+        alert("Bitte gib zuerst deine Antwort in das Textfeld ein.");
+        return;
+      }
+
+      isCurrentChecked = true;
+      txtArea.disabled = true;
+
+      const normUser = normalizeGermanText(userText);
+      const keywords = extractKeyKeywords(q.musterantwort || "");
+
+      // Prüfung: Sind alle relevanten Kernbestandteile / Signalwörter enthalten?
+      const missing = [];
+      keywords.forEach(kw => {
+        // Prüfung auf Wortstamm (Prefix-Match ab 4 Buchstaben)
+        const stem = kw.length > 5 ? kw.substring(0, kw.length - 2) : kw;
+        if (!normUser.includes(stem)) {
+          missing.push(kw);
+        }
+      });
+
+      // Bei kurzen Antworten muss mindestens 80% Keyword-Trefferquote da sein, sonst alle
+      const matchRate = keywords.length > 0 ? (keywords.length - missing.length) / keywords.length : 1;
+      const isCorrect = (keywords.length <= 4) ? (missing.length === 0) : (matchRate >= 0.75);
+
+      applyFreeTextEvaluation(isCorrect, missing);
+    }
+
+    function applyFreeTextEvaluation(isCorrect, missingKeywords = []) {
+      const q = sessionQuestions[sessionIndex];
+      const txtArea = document.getElementById("inputFreeTextAnswer");
+      const boxAnswer = document.getElementById("boxRevealedAnswer");
+      const statusIcon = document.getElementById("textResultIcon");
+      const statusText = document.getElementById("textResultStatus");
+      const boxMissing = document.getElementById("boxMissingKeywords");
+      const labelMissing = document.getElementById("labelMissingWords");
+
+      boxAnswer.classList.remove("hidden");
+
+      if (isCorrect) {
+        txtArea.className = "w-full bg-slate-800/90 border-2 border-emerald-500 rounded-2xl p-3.5 text-sm text-slate-100 leading-relaxed";
+        boxAnswer.className = "rounded-2xl p-4 border border-emerald-500/50 bg-emerald-950/20 space-y-3 animate-slide-up";
+        statusIcon.className = "w-6 h-6 rounded-full flex items-center justify-center text-xs font-black bg-emerald-500 text-white";
+        statusIcon.textContent = "✓";
+        statusText.textContent = "Vollständig & richtig beantwortet!";
+        statusText.className = "text-sm font-bold text-emerald-400";
+        boxMissing.classList.add("hidden");
+      } else {
+        txtArea.className = "w-full bg-slate-800/90 border-2 border-rose-500 rounded-2xl p-3.5 text-sm text-slate-100 leading-relaxed";
+        boxAnswer.className = "rounded-2xl p-4 border border-rose-500/50 bg-rose-950/20 space-y-3 animate-slide-up";
+        statusIcon.className = "w-6 h-6 rounded-full flex items-center justify-center text-xs font-black bg-rose-500 text-white";
+        statusIcon.textContent = "✕";
+        statusText.textContent = "Leider unvollständig oder fehlerhaft!";
+        statusText.className = "text-sm font-bold text-rose-400";
+
+        if (missingKeywords.length > 0) {
+          boxMissing.classList.remove("hidden");
+          labelMissing.textContent = missingKeywords.slice(0, 8).join(", ");
+        } else {
+          boxMissing.classList.add("hidden");
+        }
+      }
+
+      recordQuestionResult(q.id, isCorrect);
+
+      if (isExamSession) {
+        if (isCorrect) {
+          examScore.correct++;
+        } else {
+          examScore.wrongQuestions.push(q);
+        }
+      } else {
+        if (!isCorrect && config.repeatWrong) {
           sessionWrongQueue.push(q);
         }
       }
@@ -1364,28 +1503,31 @@
             advanceToNextQuestion();
           }
         } else {
-          if (isCurrentChecked) {
+          // Freitext
+          if (!isCurrentChecked) {
+            checkFreeTextAnswer();
+          } else {
             advanceToNextQuestion();
           }
         }
       };
 
-      // Freitext Selbstkontrolle
-      document.getElementById("btnRevealAnswer").onclick = () => {
-        document.getElementById("boxRevealedAnswer").classList.remove("hidden");
+      // Live Zeichenzähler für Freitext-Eingabe
+      document.getElementById("inputFreeTextAnswer").oninput = (e) => {
+        document.getElementById("textCharCount").textContent = `${e.target.value.length} Zeichen`;
       };
-      document.getElementById("btnRateSelfWrong").onclick = () => {
+
+      // Manuelle Korrektur falls sinngemäß richtig formuliert
+      document.getElementById("btnManualOverrideCorrect").onclick = () => {
         const q = sessionQuestions[sessionIndex];
-        recordQuestionResult(q.id, false);
-        if (config.repeatWrong && !isExamSession) sessionWrongQueue.push(q);
-        isCurrentChecked = true;
-        advanceToNextQuestion();
-      };
-      document.getElementById("btnRateSelfCorrect").onclick = () => {
-        const q = sessionQuestions[sessionIndex];
+        // Aus sessionWrongQueue entfernen
+        sessionWrongQueue = sessionWrongQueue.filter(item => item.id !== q.id);
+        if (isExamSession) {
+          examScore.wrongQuestions = examScore.wrongQuestions.filter(item => item.id !== q.id);
+          examScore.correct = Math.min(examScore.total, examScore.correct + 1);
+        }
         recordQuestionResult(q.id, true);
-        isCurrentChecked = true;
-        advanceToNextQuestion();
+        applyFreeTextEvaluation(true, []);
       };
 
       // Exam Modal Close
