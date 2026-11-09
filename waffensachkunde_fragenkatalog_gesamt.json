@@ -22,7 +22,7 @@
       },
       {
         "key": "b",
-        "text": "wer die Waffe verbringt oder mit nimmt."
+        "text": "wer die Waffe verbringt oder mitnimmt."
       },
       {
         "key": "c",
@@ -41,10 +41,10 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Freitext",
-    "frage": "Wie werden Schusswaffen im Sinne des Waffengesetzes de finiert?",
+    "frage": "Wie werden Schusswaffen im Sinne des Waffengesetzes definiert?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Schusswaffen sind Gegenstände, die zum Angriff oder zur Verteidigung, zur Signalgebung, zur Jagd, zur Distanzinjektion, zur Markierung , zum Sport oder zum Spiel bestimmt sind und bei denen Geschosse durch einen Lauf getrieben werden (Anlage 1 Abschnitt 1 Unterabschnitt 1 Nr. 1.1 WaffG)."
+    "musterantwort": "Schusswaffen sind Gegenstände, die zum Angriff oder zur Verteidigung, zur Signalgebung, zur Jagd, zur Distanzinjektion, zur Markierung, zum Sport oder zum Spiel bestimmt sind und bei denen Geschosse durch einen Lauf getrieben werden (Anlage 1 Abschnitt 1 Unterabschnitt 1 Nr. 1.1 WaffG)."
   },
   {
     "id": "1.04",
@@ -81,7 +81,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Soft Air Waffen mit einer Geschoss energie über 0,5 Joule"
+        "text": "Softair-Waffen mit einer Geschossenergie über 0,5 Joule"
       },
       {
         "key": "b",
@@ -107,7 +107,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Single Action Revolver"
+        "text": "Single-Action-Revolver"
       },
       {
         "key": "b",
@@ -119,7 +119,7 @@
       },
       {
         "key": "d",
-        "text": "Double Action Revolver"
+        "text": "Double-Action-Revolver"
       }
     ],
     "loesung": [
@@ -132,7 +132,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Multiple Choice",
-    "frage": "Ein Double Action Revolver ist im Sinne des Waffenrechts...",
+    "frage": "Ein Double-Action-Revolver ist im Sinne des Waffenrechts...",
     "optionen": [
       {
         "key": "a",
@@ -161,7 +161,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "WBK pflichtige Schusswaffe"
+        "text": "WBK-pflichtige Schusswaffe"
       },
       {
         "key": "b",
@@ -204,7 +204,7 @@
       },
       {
         "key": "c",
-        "text": "Ein wesentlicher, beschusspflichtiger Teil der Sch usswaffe."
+        "text": "Ein wesentlicher, beschusspflichtiger Teil der Schusswaffe."
       }
     ],
     "loesung": [
@@ -221,7 +221,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Schusswaffen oder ihnen gleichgest ellte Gegenstände."
+        "text": "Schusswaffen oder ihnen gleichgestellte Gegenstände."
       },
       {
         "key": "b",
@@ -252,7 +252,7 @@
       },
       {
         "key": "b",
-        "text": "Schusswaffen, die eine Gesamtmindestlänge von 60 cm unterschreiten oder bei denen die Lauflänge klein er als 30 cm ist, werden als Kurzwaffe bezeichnet."
+        "text": "Schusswaffen, die eine Gesamtmindestlänge von 60 cm unterschreiten oder bei denen die Lauflänge kleiner als 30 cm ist, werden als Kurzwaffe bezeichnet."
       },
       {
         "key": "c",
@@ -274,7 +274,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Blasroh r, Harpune, Armbrust"
+        "text": "Blasrohr, Harpune, Armbrust"
       },
       {
         "key": "b",
@@ -429,7 +429,7 @@
       },
       {
         "key": "b",
-        "text": "eine vollautoma tische Pistole."
+        "text": "eine vollautomatische Pistole."
       },
       {
         "key": "c",
@@ -499,7 +499,7 @@
       },
       {
         "key": "b",
-        "text": "Der Schalldämpfer ist imme r erlaubnisfreies Zubehör."
+        "text": "Der Schalldämpfer ist immer erlaubnisfreies Zubehör."
       },
       {
         "key": "c",
@@ -575,7 +575,7 @@
       },
       {
         "key": "b",
-        "text": "Pa tronenmunition mit Vollmantelgeschossen, bei denen die Geschossspitze entfernt wurde, so dass der Bleikern freiliegt"
+        "text": "Patronenmunition mit Vollmantelgeschossen, bei denen die Geschossspitze entfernt wurde, so dass der Bleikern freiliegt"
       },
       {
         "key": "c",
@@ -669,7 +669,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Double Acti on Revolver"
+        "text": "Double-Action-Revolver"
       },
       {
         "key": "b",
@@ -744,7 +744,7 @@
     "frage": "Welche Arten von Munition unterscheidet das Waffengesetz?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Patronenmunition (Hülsen mit Treibladungen, die ein Geschoss enthalten und Geschosse mit Eigenantrieb) Kartuschenmunition (Hülsen mit Ladungen, die kein Geschoss enthalten) Pyrotechnische Munition (Munition, in der explosionsgefährliche Stoffe oder Stoffgemische enthalten sind, die einen Licht , Schall , Rauch oder ähnlichen Effekt erzeugen) Hülsenlose Munition (Treibladungen mit und ohne Geschosse)"
+    "musterantwort": "Patronenmunition (Hülsen mit Treibladungen, die ein Geschoss enthalten und Geschosse mit Eigenantrieb) Kartuschenmunition (Hülsen mit Ladungen, die kein Geschoss enthalten) Pyrotechnische Munition (Munition, in der explosionsgefährliche Stoffe oder Stoffgemische enthalten sind, die einen Licht, Schall, Rauch oder ähnlichen Effekt erzeugen) Hülsenlose Munition (Treibladungen mit und ohne Geschosse)"
   },
   {
     "id": "1.31",
@@ -786,7 +786,7 @@
       },
       {
         "key": "b",
-        "text": "Patronenmunition Kaliber .38 Special"
+        "text": "Patronenmunition Kaliber.38 Special"
       },
       {
         "key": "c",
@@ -940,7 +940,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Multiple Choice",
-    "frage": "Sie wollen ihren Revolver mit dem Ihres Schützenkameraden dauerhaft tauschen, was müsse n sie dabei beachten?",
+    "frage": "Sie wollen ihren Revolver mit dem Ihres Schützenkameraden dauerhaft tauschen, was müssen sie dabei beachten?",
     "optionen": [
       {
         "key": "a",
@@ -1156,7 +1156,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Multiple Choice",
-    "frage": "Durch wen und wie wird die waffen rechtliche Zuverlä ssigkeit einer Person festgestellt?",
+    "frage": "Durch wen und wie wird die waffen rechtliche Zuverlässigkeit einer Person festgestellt?",
     "optionen": [
       {
         "key": "a",
@@ -1164,11 +1164,11 @@
       },
       {
         "key": "b",
-        "text": "Es werden Auskünfte aus dem Bundeszentralregister, dem zentralen staatsanwaltschaftlichen Verfahrensregister , Stellungnahme n der örtlichen Polizeidienststelle , der Bundespolizei und des Zollkriminalamts eingeholt. Zudem werden Auskünfte bei den zuständigen Verfassungsschutzämtern eingeholt."
+        "text": "Es werden Auskünfte aus dem Bundeszentralregister, dem zentralen staatsanwaltschaftlichen Verfahrensregister, Stellungnahmen der örtlichen Polizeidienststelle, der Bundespolizei und des Zollkriminalamts eingeholt. Zudem werden Auskünfte bei den zuständigen Verfassungsschutzämtern eingeholt."
       },
       {
         "key": "c",
-        "text": "Die Zuverlässigkeit wird durch die persönliche Vorstellung bei der örtlichen Behörde fes tgestellt."
+        "text": "Die Zuverlässigkeit wird durch die persönliche Vorstellung bei der örtlichen Behörde festgestellt."
       }
     ],
     "loesung": [
@@ -1186,11 +1186,11 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Jeder, der wegen einer vorsätzlich begangenen Straftat zu einer Geldstrafe von mindestens 60 Tagessätzen verurteilt wurde , wenn seit dem Eintritt der Rechtskraft der letzten Verurteilung fünf Jahre noch nicht verstrichen sind ."
+        "text": "Jeder, der wegen einer vorsätzlich begangenen Straftat zu einer Geldstrafe von mindestens 60 Tagessätzen verurteilt wurde, wenn seit dem Eintritt der Rechtskraft der letzten Verurteilung fünf Jahre noch nicht verstrichen sind."
       },
       {
         "key": "b",
-        "text": "Jeder, der wegen der Begehung von zwei verschiedenen vorsätzlichen Straftaten mindestens zwei Mal zu einer Geldstrafen verurteilt wurde , wenn seit dem Eintritt der Rechtskraft der letzten Verurteilung fünf Jahre noch nicht verstrichen sind."
+        "text": "Jeder, der wegen der Begehung von zwei verschiedenen vorsätzlichen Straftaten mindestens zwei Mal zu einer Geldstrafen verurteilt wurde, wenn seit dem Eintritt der Rechtskraft der letzten Verurteilung fünf Jahre noch nicht verstrichen sind."
       },
       {
         "key": "c",
@@ -1237,7 +1237,7 @@
     "frage": "Durch wen und wie wird die persönliche Eignung einer Person festgestellt?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Die persönliche Eignung wird von der zuständigen Behörde geprüft ; ggf. ist ein amts oder fachärztliches oder fachpsychologisches Zeugnis beizubringen."
+    "musterantwort": "Die persönliche Eignung wird von der zuständigen Behörde geprüft; ggf. ist ein amts oder fachärztliches oder fachpsychologisches Zeugnis beizubringen."
   },
   {
     "id": "1.52",
@@ -1248,7 +1248,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Grundsätzlich alle Personen unter 25 Jahren , wenn sie kein amts oder fachärztliches oder fachpsychologisches Zeugnis über ihre geistige und körperliche Eignung vorlegen können."
+        "text": "Grundsätzlich alle Personen unter 25 Jahren, wenn sie kein amts oder fachärztliches oder fachpsychologisches Zeugnis über ihre geistige und körperliche Eignung vorlegen können."
       },
       {
         "key": "b",
@@ -1274,7 +1274,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Waffen oder Munition verbringt, wer diese über die Grenze zum dortigen Verbleib oder mit dem Ziel des Besitzwechsels in den, durch den oder aus dem Geltungsbereich des WaffG zu einer anderen Person   oder zu sich selbst transportieren lässt oder selbst transportiert."
+        "text": "Waffen oder Munition verbringt, wer diese über die Grenze zum dortigen Verbleib oder mit dem Ziel des Besitzwechsels in den, durch den oder aus dem Geltungsbereich des WaffG zu einer anderen Person oder zu sich selbst transportieren lässt oder selbst transportiert."
       },
       {
         "key": "b",
@@ -1307,7 +1307,7 @@
       },
       {
         "key": "c",
-        "text": "Ein von der EU standard isiertes Waffenbesitzdokument (gegebenenfalls ist vor der Einreise in einen anderen Mitgliedstaat dessen Erlaubnis zur Mitnahme einzuholen)."
+        "text": "Ein von der EU standardisiertes Waffenbesitzdokument (gegebenenfalls ist vor der Einreise in einen anderen Mitgliedstaat dessen Erlaubnis zur Mitnahme einzuholen)."
       }
     ],
     "loesung": [
@@ -1320,7 +1320,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Multiple Choice",
-    "frage": "Eine Schusswaffe ist „zugriffsbereit“ im Sinne des Waffengesetzes, ...",
+    "frage": "Eine Schusswaffe ist „zugriffsbereit“ im Sinne des Waffengesetzes,...",
     "optionen": [
       {
         "key": "a",
@@ -1450,14 +1450,14 @@
     "frage": "Was bedeutet „schießen“ im Sinne des Waffengesetzes?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Im Sinne des WaffG schießt jemand, der mit einer Schusswaffe ein Geschoss durch einen Lauf verschießt , Kartuschenmunition abschießt, mit Patronen oder Kartuschenmunition Reiz oder andere Wirkstoffe verschießt oder pyrotechnische Munition verschießt."
+    "musterantwort": "Im Sinne des WaffG schießt jemand, der mit einer Schusswaffe ein Geschoss durch einen Lauf verschießt, Kartuschenmunition abschießt, mit Patronen oder Kartuschenmunition Reiz oder andere Wirkstoffe verschießt oder pyrotechnische Munition verschießt."
   },
   {
     "id": "1.62",
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Multiple Choice",
-    "frage": "Welche Erlaubnis berechtigt zum Schießen mit Schreckschuss , Reizstoff und Signalwaffen (mit Zulassungszeichen PTB im Kreis) außerhalb des eigenen befriedeten Besitztums?",
+    "frage": "Welche Erlaubnis berechtigt zum Schießen mit Schreckschuss, Reizstoff und Signalwaffen (mit Zulassungszeichen PTB im Kreis) außerhalb des eigenen befriedeten Besitztums?",
     "optionen": [
       {
         "key": "a",
@@ -1577,7 +1577,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Multiple Choice",
-    "frage": "Für die Anerkennung eines Bedürfnisses zum Erwerb und Besitz von Schusswaffen (grüne Waffenbesitzkarte) ist bei Sportschützen die Vorlage einer Bescheinigung des anerkannten Schießsportverbandes erforderlich, dem der Antragsteller durch seine Vereinsmitgliedschaft angehört. Die Bescheinigung muss ausweisen, dass ...",
+    "frage": "Für die Anerkennung eines Bedürfnisses zum Erwerb und Besitz von Schusswaffen (grüne Waffenbesitzkarte) ist bei Sportschützen die Vorlage einer Bescheinigung des anerkannten Schießsportverbandes erforderlich, dem der Antragsteller durch seine Vereinsmitgliedschaft angehört. Die Bescheinigung muss ausweisen, dass...",
     "optionen": [
       {
         "key": "a",
@@ -1759,7 +1759,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Freitext",
-    "frage": "Was ist Voraussetzung für den Erwerb von Schreckschuss , Reizstoff und Signalwaffen, deren Erwerb und Besitz erlaubnisfrei ist?",
+    "frage": "Was ist Voraussetzung für den Erwerb von Schreckschuss, Reizstoff und Signalwaffen, deren Erwerb und Besitz erlaubnisfrei ist?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Vollendung des 18. Lebensjahres."
@@ -1844,7 +1844,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Freitext",
-    "frage": "Welche Voraussetzungen müssen zur Erteilung einer waffenrechtlichen Erlaubnis für einen R evolver .44MAGNUM bei Sportschützen gegeben sein?",
+    "frage": "Welche Voraussetzungen müssen zur Erteilung einer waffenrechtlichen Erlaubnis für einen R evolver.44MAGNUM bei Sportschützen gegeben sein?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "1. Vollendung des 21. Lebensjahres 2. Nachweis der Sachkunde 3. Zuverlässigkeit 4. Persönliche Eignung, bei Personen vor Vollendung des 25. Lebensjahres nachgewiesen durch ein amts oder fachärztlichen oder fachpsych ologischen Zeugnis 5. Nachweis eines Bedürfnisses 6. Nachweis der sicheren Aufbewahrung von Schusswaffen"
@@ -1857,7 +1857,7 @@
     "frage": "Das Fortbestehen des Bedürfnisses wird nach erstmaliger Erteilung einer waffenrechtlichen Erlaubnis von der Behörde geprüft. Welche Frist hat der Gesetzgeber hier vorgesehen?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Mindestens alle f ünf Jahre"
+    "musterantwort": "Mindestens alle fünf Jahre"
   },
   {
     "id": "1.83",
@@ -1874,17 +1874,17 @@
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Freitext",
-    "frage": "Welche weiteren Voraussetzungen müssen Jugendliche, die das 16. Lebensjahr vollendet haben und unter 18 Jahren sind, erfüllen , damit sie mit WBK pflichtigen Waffen für Randfeuerpatronen bis zu einem Kaliber von 5,6 mm lfB  (.22l.r.) und einer maximalen Mündungsenergie von 200 Joule schießen dürfen?",
+    "frage": "Welche weiteren Voraussetzungen müssen Jugendliche, die das 16. Lebensjahr vollendet haben und unter 18 Jahren sind, erfüllen, damit sie mit WBK-pflichtigen Waffen für Randfeuerpatronen bis zu einem Kaliber von 5,6 mm lfB (.22l.r.) und einer maximalen Mündungsenergie von 200 Joule schießen dürfen?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Schriftliches oder elektronisches Einverständnis des Sorgeberechtigten oder desse n/deren Anwesenheit."
+    "musterantwort": "Schriftliches oder elektronisches Einverständnis des Sorgeberechtigten oder dessen/deren Anwesenheit."
   },
   {
     "id": "1.85",
     "kapitel": "Kapitel I",
     "themengebiet": "1. Begriffe des Waffenrechts",
     "typ": "Freitext",
-    "frage": "Welche weiteren Voraussetzungen müssen erfüllt sein, damit Jugendliche unter 16 Jahren mit WBK pflichtigen Einzellader Flinten bis zu dem Kaliber 12 schießen dürfen?",
+    "frage": "Welche weiteren Voraussetzungen müssen erfüllt sein, damit Jugendliche unter 16 Jahren mit WBK-pflichtigen Einzellader Flinten bis zu dem Kaliber 12 schießen dürfen?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Schriftliches oder elektronisches Einverständnis des Sorgeberechtigten und dessen Anwesenheit oder die Anwesenheit einer verantwortlichen und zur Kinder und Jugendarbeit für das Schießen geeigneten Aufsichtsperson."
@@ -1925,11 +1925,11 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Sportgewehr .223 Remington, das wie ein Sturmgewehr aussieht ohne Zulassungszeichen"
+        "text": "Sportgewehr.223 Remington, das wie ein Sturmgewehr aussieht ohne Zulassungszeichen"
       },
       {
         "key": "b",
-        "text": "Schreckschuss , Reizstoff und Signalpistole mit Zulassungszeichen „PTB im Kreis“"
+        "text": "Schreckschuss, Reizstoff und Signalpistole mit Zulassungszeichen „PTB im Kreis“"
       },
       {
         "key": "c",
@@ -1979,7 +1979,7 @@
       },
       {
         "key": "b",
-        "text": "Anscheinswaffen dürfen geführt werden, bei der Verwendung bei Foto , Film oder Fernsehaufnahmen oder bei Theateraufführungen."
+        "text": "Anscheinswaffen dürfen geführt werden, bei der Verwendung bei Foto, Film oder Fernsehaufnahmen oder bei Theateraufführungen."
       },
       {
         "key": "c",
@@ -2008,7 +2008,7 @@
       },
       {
         "key": "c",
-        "text": "Der Lauf eines Revolvers wird von einem befreundeten Schlosser auf 4 Zol l verkürzt."
+        "text": "Der Lauf eines Revolvers wird von einem befreundeten Schlosser auf 4 Zoll verkürzt."
       }
     ],
     "loesung": [
@@ -2029,7 +2029,7 @@
       },
       {
         "key": "b",
-        "text": "Er muss den Kauf der zuständigen Behörde unter Vorlage des Ka ufvertrages mitteilen."
+        "text": "Er muss den Kauf der zuständigen Behörde unter Vorlage des Kaufvertrages mitteilen."
       },
       {
         "key": "c",
@@ -2096,7 +2096,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Welcher Sportschütze muss für die erstmalige Erteilung einer Erlaubnis zum Erwerb und Besitz von Schusswaffen ein amts oder fac härztliches oder fachpsychologisches Zeugnis über seine geistige Eignung vorlegen?",
+    "frage": "Welcher Sportschütze muss für die erstmalige Erteilung einer Erlaubnis zum Erwerb und Besitz von Schusswaffen ein amts oder fachärztliches oder fachpsychologisches Zeugnis über seine geistige Eignung vorlegen?",
     "optionen": [
       {
         "key": "a",
@@ -2197,7 +2197,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Welche Erlaubnis ist zum Erwerb einer halbautomatischen Pistole .32 S&W erforderlich?",
+    "frage": "Welche Erlaubnis ist zum Erwerb einer halbautomatischen Pistole.32 S&W erforderlich?",
     "optionen": [
       {
         "key": "a",
@@ -2222,7 +2222,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Beim Erwerb einer erlaubnispflichtigen Schusswaffe von einer Privatperson durch den Erwerbsberechtigten ist ...",
+    "frage": "Beim Erwerb einer erlaubnispflichtigen Schusswaffe von einer Privatperson durch den Erwerbsberechtigten ist...",
     "optionen": [
       {
         "key": "a",
@@ -2230,7 +2230,7 @@
       },
       {
         "key": "b",
-        "text": "der Erwerb der Waffe inn erhalb von vier Wochen der zuständigen Behörde anzuzeigen und die WBK zur Eintragung vorzulegen."
+        "text": "der Erwerb der Waffe innerhalb von vier Wochen der zuständigen Behörde anzuzeigen und die WBK zur Eintragung vorzulegen."
       },
       {
         "key": "c",
@@ -2272,7 +2272,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Was ist zu tun, wenn erlaubnispflichtige Waffen oder Munition abhandenkommen ?",
+    "frage": "Was ist zu tun, wenn erlaubnispflichtige Waffen oder Munition abhandenkommen?",
     "optionen": [
       {
         "key": "a",
@@ -2297,7 +2297,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Was ist zu tun, wenn Erlaubnisurkunden abhandenkommen ?",
+    "frage": "Was ist zu tun, wenn Erlaubnisurkunden abhandenkommen?",
     "optionen": [
       {
         "key": "a",
@@ -2484,7 +2484,7 @@
       },
       {
         "key": "c",
-        "text": "Kurzwaffe mit Kaliber .357 SIG"
+        "text": "Kurzwaffe mit Kaliber.357 SIG"
       }
     ],
     "loesung": [
@@ -2525,7 +2525,7 @@
     "frage": "Welche Teile erlaubnispflichtiger Schusswaffen dürfen einzeln nur mit gültiger Erwerbserlaubnis erworben werden?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Lauf Verschluss Patronen oder Kartuschenlager Griffstück bei Kurzwaffen"
+    "musterantwort": "1. Lauf, 2. Verschluss, 3. Patronen- oder Kartuschenlager, 4. Griffstück bei Kurzwaffen"
   },
   {
     "id": "2.22",
@@ -2540,7 +2540,7 @@
       },
       {
         "key": "b",
-        "text": "Schreckschuss , Reizstoff und Signalwaffen, die das Zulassungszeichen „PTB im Kreis“ tragen."
+        "text": "Schreckschuss, Reizstoff und Signalwaffen, die das Zulassungszeichen „PTB im Kreis“ tragen."
       },
       {
         "key": "c",
@@ -2587,7 +2587,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Sportschützen, die das 25. Lebensjahr noch nicht vollendet haben und erstmalig eine erlaubnis und bedü rfnispflichtige Großkaliberwaffe erwerben wollen."
+        "text": "Sportschützen, die das 25. Lebensjahr noch nicht vollendet haben und erstmalig eine erlaubnis und bedürfnispflichtige Großkaliberwaffe erwerben wollen."
       },
       {
         "key": "b",
@@ -2595,7 +2595,7 @@
       },
       {
         "key": "c",
-        "text": "Sportschützen, die das 25. Lebensjahr noch nicht vollendet haben und erstmalig eine Schusswaffe bis Kaliber .22lr (mit Randzündung) erwerben wollen."
+        "text": "Sportschützen, die das 25. Lebensjahr noch nicht vollendet haben und erstmalig eine Schusswaffe bis Kaliber.22lr (mit Randzündung) erwerben wollen."
       }
     ],
     "loesung": [
@@ -2616,7 +2616,7 @@
       },
       {
         "key": "b",
-        "text": "Double Action Revolver im Kaliber .357 Magnum"
+        "text": "Double-Action-Revolver im Kaliber.357 Magnum"
       },
       {
         "key": "c",
@@ -2636,7 +2636,7 @@
     "frage": "Sie wollen ein Kleinkaliber Repetiergewehr verkaufen. Es interessieren sich 1. ein Jäger, 2. ein Sportschütze. In welcher Form ist der Nachweis der Erwerbsberechtigung in den genannten Fällen zu erbringen?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Zu 1: gültiger Jagdschein Zu 2: Waffenbesitzkarte für Sportschützen oder grüne Waffenbesitzkarte mit Voreintrag"
+    "musterantwort": "Zu 1: gültiger Jagdschein; Zu 2: Waffenbesitzkarte für Sportschützen oder grüne Waffenbesitzkarte mit Voreintrag"
   },
   {
     "id": "2.27",
@@ -2668,7 +2668,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Darf ein Sportschütze seine Repetierbüchse im Kaliber .22lr mit einem Schalldämpfer ausstatten?",
+    "frage": "Darf ein Sportschütze seine Repetierbüchse im Kaliber.22lr mit einem Schalldämpfer ausstatten?",
     "optionen": [
       {
         "key": "a",
@@ -2693,7 +2693,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Wie viele halbautomatische Büchsen darf ein Sportschütze maximal mit seiner gelben Waffenbesitzkarte er werb en bzw. diese darin eintragen lassen?",
+    "frage": "Wie viele halbautomatische Büchsen darf ein Sportschütze maximal mit seiner gelben Waffenbesitzkarte er werben bzw. diese darin eintragen lassen?",
     "optionen": [
       {
         "key": "a",
@@ -2827,7 +2827,7 @@
       },
       {
         "key": "b",
-        "text": "Auf der Waffe befindet sich das Zulassungszeichen  (P TB im Kreis) oder das Zulassungszeichen  (F im Fünfeck)."
+        "text": "Auf der Waffe befindet sich das Zulassungszeichen (PTB im Kreis) oder das Zulassungszeichen (F im Fünfeck)."
       },
       {
         "key": "c",
@@ -2844,7 +2844,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Braucht ein Volljähriger für den Erwerb von Druckluft , Federdruck oder CO Waffen eine Erwerbsberechti2 gung?",
+    "frage": "Braucht ein Volljähriger für den Erwerb von Druckluft, Federdruck oder CO Waffen eine Erwerbsberechti2 gung?",
     "optionen": [
       {
         "key": "a",
@@ -2856,7 +2856,7 @@
       },
       {
         "key": "c",
-        "text": "Nein, wenn die Waffe mit  „F im Fünfeck“ gekennzeichnet ist."
+        "text": "Nein, wenn die Waffe mit „F im Fünfeck“ gekennzeichnet ist."
       }
     ],
     "loesung": [
@@ -2869,7 +2869,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Sie haben in ihrer WBK einen Voreintrag für einen Revolver im Kaliber .38 Spezial. Ihr Waffenhändler bietet Ihnen zu einem sehr günstigen Preis ein Sondermodell im Kaliber .357 Mag. an. Dürfen Sie diesen erwerben?",
+    "frage": "Sie haben in ihrer WBK einen Voreintrag für einen Revolver im Kaliber.38 Spezial. Ihr Waffenhändler bietet Ihnen zu einem sehr günstigen Preis ein Sondermodell im Kaliber.357 Mag. an. Dürfen Sie diesen erwerben?",
     "optionen": [
       {
         "key": "a",
@@ -2877,7 +2877,7 @@
       },
       {
         "key": "b",
-        "text": "Nein, die Magnum Pat rone ist länger."
+        "text": "Nein, die Magnum Patrone ist länger."
       },
       {
         "key": "c",
@@ -2927,7 +2927,7 @@
       },
       {
         "key": "b",
-        "text": "Derjenige, der eine Schreckschuss , Reizstoff oder Signalwaffe mit dem Zulassungszeichen „PTB im Kreis“ erwirbt."
+        "text": "Derjenige, der eine Schreckschuss, Reizstoff oder Signalwaffe mit dem Zulassungszeichen „PTB im Kreis“ erwirbt."
       },
       {
         "key": "c",
@@ -3074,15 +3074,15 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Eine Munitionserwerbsberechtigung für Patronen im Kaliber .357 Magnum berechtigt zum Erwerb von Munition...",
+    "frage": "Eine Munitionserwerbsberechtigung für Patronen im Kaliber.357 Magnum berechtigt zum Erwerb von Munition...",
     "optionen": [
       {
         "key": "a",
-        "text": "auch im Kaliber .38 Special."
+        "text": "auch im Kaliber.38 Special."
       },
       {
         "key": "b",
-        "text": "nur im Kaliber .357 Magnum."
+        "text": "nur im Kaliber.357 Magnum."
       },
       {
         "key": "c",
@@ -3099,7 +3099,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Ihre WBK lässt den Erwerb von Munition im Kaliber .357 Magnum zu. Dürfen Sie damit auch Munition 9 mm Luger erwerben?",
+    "frage": "Ihre WBK lässt den Erwerb von Munition im Kaliber.357 Magnum zu. Dürfen Sie damit auch Munition 9 mm Luger erwerben?",
     "optionen": [
       {
         "key": "a",
@@ -3225,7 +3225,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Sie überlassen Ihre WBK pflichtigen Schusswaffen Ihrem Vereinskollegen für die Dauer von 2 Monaten. Er will die Waffen ausprobieren und Ihnen gegebenenfalls abkaufen.",
+    "frage": "Sie überlassen Ihre WBK-pflichtigen Schusswaffen Ihrem Vereinskollegen für die Dauer von 2 Monaten. Er will die Waffen ausprobieren und Ihnen gegebenenfalls abkaufen.",
     "optionen": [
       {
         "key": "a",
@@ -3388,7 +3388,7 @@
       },
       {
         "key": "c",
-        "text": "Ein Waffentausch darf nur zwischen den Inhabern zweier gleichartiger Erlaubnisse im Rahmen des von ihrem Bedürfnis umfassten Zweckes erfolgen (z.B. nur zwei Sportschützen )."
+        "text": "Ein Waffentausch darf nur zwischen den Inhabern zweier gleichartiger Erlaubnisse im Rahmen des von ihrem Bedürfnis umfassten Zweckes erfolgen (z. B. nur zwei Sportschützen )."
       }
     ],
     "loesung": [
@@ -3413,7 +3413,7 @@
       },
       {
         "key": "c",
-        "text": "24 jähriger Sportschütze für eine als erste Großkaliberwaffe zu erwerbende halbautomatische Pistole im Kaliber .45 ACP"
+        "text": "24 jähriger Sportschütze für eine als erste Großkaliberwaffe zu erwerbende halbautomatische Pistole im Kaliber.45 ACP"
       }
     ],
     "loesung": [
@@ -3540,7 +3540,7 @@
       },
       {
         "key": "c",
-        "text": "besonders vertrauenswürdigen Personen (z.B. Notar, Pfarrer)"
+        "text": "besonders vertrauenswürdigen Personen (z. B. Notar, Pfarrer)"
       }
     ],
     "loesung": [
@@ -3561,7 +3561,7 @@
       },
       {
         "key": "b",
-        "text": "Derjenige, der eine erlaubnispflichtige Kurzwaffe während einer traditionellen Brauchtumsveranstaltung (z.B. Schützenaufmarsch) führt."
+        "text": "Derjenige, der eine erlaubnispflichtige Kurzwaffe während einer traditionellen Brauchtumsveranstaltung (z. B. Schützenaufmarsch) führt."
       },
       {
         "key": "c",
@@ -3582,7 +3582,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Schreckschuss , Reizstoff und Signalwaffen mit dem Zulassungszeichen „PTB im Kreis“ in der Öffentlichkeit (ausgenommen öffentliche Veranstaltungen) führen."
+        "text": "Schreckschuss, Reizstoff und Signalwaffen mit dem Zulassungszeichen „PTB im Kreis“ in der Öffentlichkeit (ausgenommen öffentliche Veranstaltungen) führen."
       },
       {
         "key": "b",
@@ -3607,15 +3607,15 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Zum Erwerb von Schreckschuss , Reizstoff und Signalwaffen, sofern diese das Zulassungszeichen „PTB im Kreis“ tragen."
+        "text": "Zum Erwerb von Schreckschuss, Reizstoff und Signalwaffen, sofern diese das Zulassungszeichen „PTB im Kreis“ tragen."
       },
       {
         "key": "b",
-        "text": "Zum Besitz von Schreckschuss , Reizstoff und Signalwaffen, sofern diese das Zulassungszeichen „PTB im Kreis“ tragen."
+        "text": "Zum Besitz von Schreckschuss, Reizstoff und Signalwaffen, sofern diese das Zulassungszeichen „PTB im Kreis“ tragen."
       },
       {
         "key": "c",
-        "text": "Zum Führen von Schreckschuss , Reizstoff und Signalwaffen, sofern diese das Zulassungsze ichen „PTB im Kreis“ tragen."
+        "text": "Zum Führen von Schreckschuss, Reizstoff und Signalwaffen, sofern diese das Zulassungszeichen „PTB im Kreis“ tragen."
       }
     ],
     "loesung": [
@@ -3784,11 +3784,11 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Druckluft , Federdruck , CO Waffen. 2"
+        "text": "Druckluft, Federdruck, CO Waffen. 2"
       },
       {
         "key": "b",
-        "text": "Schreckschuss , Reizstoff , Signalwaffen mit dem Zeichen „PTB im Kreis“ (PTB = Physikalisch Technische Bundesanstalt)."
+        "text": "Schreckschuss, Reizstoff, Signalwaffen mit dem Zeichen „PTB im Kreis“ (PTB = Physikalisch Technische Bundesanstalt)."
       },
       {
         "key": "c",
@@ -3935,7 +3935,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Welcher der genannten Gegenstände darf nicht ohne weiteres geführt werd en?",
+    "frage": "Welcher der genannten Gegenstände darf nicht ohne weiteres geführt werden?",
     "optionen": [
       {
         "key": "a",
@@ -4024,7 +4024,7 @@
       },
       {
         "key": "b",
-        "text": "Waffenbesitzkarte und Waffenschei n"
+        "text": "Waffenbesitzkarte und Waffenschein"
       },
       {
         "key": "c",
@@ -4040,20 +4040,11 @@
     "id": "2.84",
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
-    "typ": "Multiple Choice",
-    "frage": "Welche Dokumente muss ein Sportschütze mitführen, der a) seine eigene erlaubnispflichtige Waffe zum Schießstand führt (nicht zugriffs bzw. schussbereit) b) die erlaubnispflichtige Waffe eines anderen zum Schießstand führt (nicht zugriffs bzw. schussbereit)?",
-    "optionen": [
-      {
-        "key": "a",
-        "text": "Personalausweis oder Reisepass und WBK"
-      },
-      {
-        "key": "b",
-        "text": "Personalausweis oder Reisepass, die eigene WBK und eine Bescheinigung des Überlassens mit Datum der Überlassung."
-      }
-    ],
+    "typ": "Freitext",
+    "frage": "Welche Dokumente muss ein Sportschütze mitführen, der a) seine eigene erlaubnispflichtige Waffe zum Schießstand transportiert (nicht zugriffs- bzw. nicht schussbereit) b) die erlaubnispflichtige Waffe eines anderen zum Schießstand transportiert (nicht zugriffs- bzw. nicht schussbereit)?",
+    "optionen": [],
     "loesung": [],
-    "musterantwort": ""
+    "musterantwort": "a) Personalausweis oder Reisepass und eigene Waffenbesitzkarte (WBK).\nb) Personalausweis oder Reisepass, die eigene WBK und ein schriftlicher Beleg des Überlassers mit Datum der Überlassung."
   },
   {
     "id": "2.85",
@@ -4110,7 +4101,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Darf ein Anderer als der WBK Inhaber dessen Kurzwaffe zur Instandsetzung zum Waffengeschä ft bringen?",
+    "frage": "Darf ein Anderer als der WBK Inhaber dessen Kurzwaffe zur Instandsetzung zum Waffengeschäft bringen?",
     "optionen": [
       {
         "key": "a",
@@ -4191,10 +4182,10 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Freitext",
-    "frage": "Bedarf es zum Führen 1. einer nicht schussbereiten Waffe im unverschlossenen Handschuhfach     oder 2. einer schussbereiten Waffe im verschlossenen Handschuhfach eines Waffenscheines?",
+    "frage": "Bedarf es zum Führen 1. einer nicht schussbereiten Waffe im unverschlossenen Handschuhfach oder 2. einer schussbereiten Waffe im verschlossenen Handschuhfach eines Waffenscheines?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Zu 1: Ja Zu 2: Ja"
+    "musterantwort": "Zu 1: Ja; Zu 2: Ja"
   },
   {
     "id": "2.93",
@@ -4211,7 +4202,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Freitext",
-    "frage": "Brauchen Sie zum zugriffsbereiten Führen von Druckluft , Federdruck oder CO2 Waffen in der Öffentlichkeit einen Waffenschein?",
+    "frage": "Brauchen Sie zum zugriffsbereiten Führen von Druckluft, Federdruck oder CO2 Waffen in der Öffentlichkeit einen Waffenschein?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Ja (Der Kleine Waff enschein reicht nicht aus.)"
@@ -4273,7 +4264,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Freitext",
-    "frage": "Wer ist zum zugriffsbereiten Führen von Schreckschuss , Reizstoff und Signalwaffen, deren Erwerb und Besitz erlaubnisfrei ist, berechtigt?",
+    "frage": "Wer ist zum zugriffsbereiten Führen von Schreckschuss, Reizstoff und Signalwaffen, deren Erwerb und Besitz erlaubnisfrei ist, berechtigt?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Inhaber des Kleinen Waffenscheines"
@@ -4362,7 +4353,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Beim Verbringen von Waffen nach Deutschland müssen vor Grenzübertritt die erforderlichen Erlaubnisse (z.B. Verbringungserlaubnis) vorliegen."
+        "text": "Beim Verbringen von Waffen nach Deutschland müssen vor Grenzübertritt die erforderlichen Erlaubnisse (z. B. Verbringungserlaubnis) vorliegen."
       },
       {
         "key": "b",
@@ -4620,7 +4611,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Wann ist eine Waf fe erneut zu beschießen?",
+    "frage": "Wann ist eine Waffe erneut zu beschießen?",
     "optionen": [
       {
         "key": "a",
@@ -4653,7 +4644,7 @@
       },
       {
         "key": "b",
-        "text": "Die Erlaubnisbehörde ist zu unterrichten, wenn ein wese ntliches Teil erworben wurde."
+        "text": "Die Erlaubnisbehörde ist zu unterrichten, wenn ein wesentliches Teil erworben wurde."
       },
       {
         "key": "c",
@@ -4674,7 +4665,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Die Waffe wurde in England erneut bes chossen, es ist nur noch der englische Beschuss gültig."
+        "text": "Die Waffe wurde in England erneut beschossen, es ist nur noch der englische Beschuss gültig."
       },
       {
         "key": "b",
@@ -4789,7 +4780,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "In I hrem eingezäunten Garten, wenn sichergestellt ist, dass die Geschosse den Garten nicht verlassen können."
+        "text": "In Ihrem eingezäunten Garten, wenn sichergestellt ist, dass die Geschosse den Garten nicht verlassen können."
       },
       {
         "key": "b",
@@ -4815,7 +4806,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Benötigen Sie zum Schießen mit einer Waffe  im Kaliber 6 mm Flobert (kein F im Fünfeck auf der Waffe vorhanden) eine behördliche Erlaubnis?",
+    "frage": "Benötigen Sie zum Schießen mit einer Waffe im Kaliber 6 mm Flobert (kein F im Fünfeck auf der Waffe vorhanden) eine behördliche Erlaubnis?",
     "optionen": [
       {
         "key": "a",
@@ -4841,7 +4832,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Wo darf man ohne Erlaubnis mit einem Gewehr im Kaliber .22lr schießen?",
+    "frage": "Wo darf man ohne Erlaubnis mit einem Gewehr im Kaliber.22lr schießen?",
     "optionen": [
       {
         "key": "a",
@@ -4920,7 +4911,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Ein 13 jähriger darf mit Druckluft , Federdruck und CO2 Waffen schießen, wenn der/die Sorgeberechtigte/n schriftlich oder elektronisch sein/ihr Einverständnis erklärt hat/haben und eine geeignete Aufsichtsperson ständig anwesend ist."
+        "text": "Ein 13 jähriger darf mit Druckluft, Federdruck und CO2 Waffen schießen, wenn der/die Sorgeberechtigte/n schriftlich oder elektronisch sein/ihr Einverständnis erklärt hat/haben und eine geeignete Aufsichtsperson ständig anwesend ist."
       },
       {
         "key": "b",
@@ -4942,7 +4933,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Darf ein 16 jähriger Schütze auf einer dafür zugelassenen Schießstätte mit einer halbautomatischen Pistole im Kaliber .40 S&W schießen?",
+    "frage": "Darf ein 16 jähriger Schütze auf einer dafür zugelassenen Schießstätte mit einer halbautomatischen Pistole im Kaliber.40 S&W schießen?",
     "optionen": [
       {
         "key": "a",
@@ -5018,7 +5009,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Darf eine kombinierte Langwaffe (z.B. Drilling) zum sportlichen Schießen benutzt werden?",
+    "frage": "Darf eine kombinierte Langwaffe (z. B. Drilling) zum sportlichen Schießen benutzt werden?",
     "optionen": [
       {
         "key": "a",
@@ -5043,7 +5034,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Wo darf der Sportschütze Patronen mit Hohlspitzgeschossen aus Kurzwaffen im Kaliber .22lr verschießen?",
+    "frage": "Wo darf der Sportschütze Patronen mit Hohlspitzgeschossen aus Kurzwaffen im Kaliber.22lr verschießen?",
     "optionen": [
       {
         "key": "a",
@@ -5093,7 +5084,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Ist für das Schießen mit einem Gewehr im Kaliber .22lr im Keller eines Wohnhauses eine behördliche Erlaubnis erforderlich?",
+    "frage": "Ist für das Schießen mit einem Gewehr im Kaliber.22lr im Keller eines Wohnhauses eine behördliche Erlaubnis erforderlich?",
     "optionen": [
       {
         "key": "a",
@@ -5143,7 +5134,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Darf man zu Silvester mit einem Revolver im Kaliber .38 Spezial ohne behördliche Erlaubnis Platzpatronen (Kartuschenmunition) verschießen?",
+    "frage": "Darf man zu Silvester mit einem Revolver im Kaliber.38 Spezial ohne behördliche Erlaubnis Platzpatronen (Kartuschenmunition) verschießen?",
     "optionen": [
       {
         "key": "a",
@@ -5445,7 +5436,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Wenn ein Mitglied, das als Sportschütze eine waffenrechtliche Erlaubnis besitzt, aus dem Schießsportverein austritt, muss der Verein ...",
+    "frage": "Wenn ein Mitglied, das als Sportschütze eine waffenrechtliche Erlaubnis besitzt, aus dem Schießsportverein austritt, muss der Verein...",
     "optionen": [
       {
         "key": "a",
@@ -5470,7 +5461,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Dürfen Sorgeberechtigte minderjäha) rige Schützen beim Schießbetrieb beaufsichtigen? b) c)",
+    "frage": "Dürfen Sorgeberechtigte minderjährige Schützen beim Schießbetrieb beaufsichtigen?",
     "optionen": [
       {
         "key": "a",
@@ -5522,7 +5513,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "2. Rechte und Pflichten",
     "typ": "Multiple Choice",
-    "frage": "Ab welchem Alter dürfen Kinder und Jugendliche mit Druckluft , Federdruck oder CO Waffe n schießen 2 und was ist dabei zu beachten?",
+    "frage": "Ab welchem Alter dürfen Kinder und Jugendliche mit Druckluft, Federdruck oder CO Waffe n schießen 2 und was ist dabei zu beachten?",
     "optionen": [
       {
         "key": "a",
@@ -5679,7 +5670,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "3. Kennzeichnung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Welches Kennzeichen muss u.a. auf einem Großkaliber Revolver angebracht sein?",
+    "frage": "Welches Kennzeichen muss u. a. auf einem Großkaliber Revolver angebracht sein?",
     "optionen": [
       {
         "key": "a",
@@ -5790,7 +5781,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "3. Kennzeichnung von Schusswaffen und Munition",
     "typ": "Freitext",
-    "frage": "Wie sind Schreckschuss , Reizstoff und Signalwaffen gekennzeichnet, deren Erwerb und Besitz erlaubnisfrei ist?",
+    "frage": "Wie sind Schreckschuss, Reizstoff und Signalwaffen gekennzeichnet, deren Erwerb und Besitz erlaubnisfrei ist?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Durch das Zulassungszeichen „PTB im Kreis“ (PTB = Physikalisch Technische Bundesanstalt)."
@@ -5914,7 +5905,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Kaliberangabe und Geschossar t auf dem Hülsenboden"
+        "text": "Kaliberangabe und Geschossart auf dem Hülsenboden"
       },
       {
         "key": "b",
@@ -6038,7 +6029,7 @@
       },
       {
         "key": "b",
-        "text": "Herstellerzeichen, Bezeichnung der Munitio n, Anzahl der Patronen in der Packung, Herstellungsjahr, Zulassungszeichen"
+        "text": "Herstellerzeichen, Bezeichnung der Munition, Anzahl der Patronen in der Packung, Herstellungsjahr, Zulassungszeichen"
       },
       {
         "key": "c",
@@ -6150,7 +6141,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "3. Kennzeichnung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Welches Beschusszeichen trägt ein in der Bundesrepublik beschossener Revolver .357 Magnum?",
+    "frage": "Welches Beschusszeichen trägt ein in der Bundesrepublik beschossener Revolver.357 Magnum?",
     "optionen": [
       {
         "key": "a",
@@ -6261,7 +6252,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Die Waffe ist für das Schießen mit allen Munitionssorten (Schwarzpulver und rauchloses Pulver) im entsprechenden Kaliber zugelassen . (PN = Prüfung Normal)"
+        "text": "Die Waffe ist für das Schießen mit allen Munitionssorten (Schwarzpulver und rauchloses Pulver) im entsprechenden Kaliber zugelassen. (PN = Prüfung Normal)"
       },
       {
         "key": "b",
@@ -6290,7 +6281,7 @@
       },
       {
         "key": "b",
-        "text": "Die Waffe wird auf Lebensdauer, Konstruktionsschlüssigkei t und Funktionstauglichkeit geprüft."
+        "text": "Die Waffe wird auf Lebensdauer, Konstruktionsschlüssigkeit und Funktionstauglichkeit geprüft."
       },
       {
         "key": "c",
@@ -6307,7 +6298,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "3. Kennzeichnung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Auf welchen Waffenteilen muss das Beschusszeichen (a uch) angebracht sein?",
+    "frage": "Auf welchen Waffenteilen muss das Beschusszeichen (auch) angebracht sein?",
     "optionen": [
       {
         "key": "a",
@@ -6419,7 +6410,7 @@
       },
       {
         "key": "b",
-        "text": "Schusswaffen mit kleinerem Kaliber als .22lr und einer Bewegungsenergie bis zu 10 Joule."
+        "text": "Schusswaffen mit kleinerem Kaliber als.22lr und einer Bewegungsenergie bis zu 10 Joule."
       },
       {
         "key": "c",
@@ -6473,7 +6464,7 @@
       },
       {
         "key": "c",
-        "text": "In einem Waffenschra nk der Norm DIN/EN 1143 1 mit dem Widerstandsgrad 0."
+        "text": "In einem Waffenschrank der Norm DIN/EN 1143-1 mit dem Widerstandsgrad 0."
       }
     ],
     "loesung": [
@@ -6491,15 +6482,15 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Sicherheitsstufe B nach VDMA 24992, Schrankg ewicht über 200kg"
+        "text": "Sicherheitsstufe B nach VDMA 24992, Schrankgewicht über 200kg"
       },
       {
         "key": "b",
-        "text": "DIN/EN 1143 1 Widerstandsgrad 0"
+        "text": "DIN/EN 1143-1 Widerstandsgrad 0"
       },
       {
         "key": "c",
-        "text": "DIN/EN 1143 1 Widerstandsgrad I"
+        "text": "DIN/EN 1143-1 Widerstandsgrad I"
       }
     ],
     "loesung": [
@@ -6624,7 +6615,7 @@
       },
       {
         "key": "c",
-        "text": "in einem Behältnis der Norm DIN/EN 1143 1 Widerstandsgrad 0 oder I aufbewahrt wird."
+        "text": "in einem Behältnis der Norm DIN/EN 1143-1 Widerstandsgrad 0 oder I aufbewahrt wird."
       }
     ],
     "loesung": [
@@ -6641,7 +6632,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "sich in einem abgeschlossenen Waffenschrank der Norm DIN/EN 1143 1 Widerstandsgrad 0 oder I befindet."
+        "text": "sich in einem abgeschlossenen Waffenschrank der Norm DIN/EN 1143-1 Widerstandsgrad 0 oder I befindet."
       },
       {
         "key": "b",
@@ -6687,7 +6678,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "4. Aufbewahrung von Schusswaffen und Munition",
     "typ": "Freitext",
-    "frage": "Wozu kann die nicht ordnungsgem äße Aufbewahrung von Waffen oder Munition u.a. führen?",
+    "frage": "Wozu kann die nicht ordnungsgemäße Aufbewahrung von Waffen oder Munition u. a. führen?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Zum Verlust der waffenrechtlichen Zuverlässigkeit."
@@ -6718,7 +6709,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "4. Aufbewahrung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Wozu kann die nicht ordnungsgemäße Aufbewahrung von Waffen oder Munition u.a. führen?",
+    "frage": "Wozu kann die nicht ordnungsgemäße Aufbewahrung von Waffen oder Munition u. a. führen?",
     "optionen": [
       {
         "key": "a",
@@ -6743,7 +6734,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "4. Aufbewahrung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Wie können Waffen und Munition außerhalb der Wohnung, z.B. bei Hotelübernachtung anlässlich eines Wettkampfes, sicher aufbewahr t werden?",
+    "frage": "Wie können Waffen und Munition außerhalb der Wohnung, z. B. bei Hotelübernachtung anlässlich eines Wettkampfes, sicher aufbewahrt werden?",
     "optionen": [
       {
         "key": "a",
@@ -6798,7 +6789,7 @@
       },
       {
         "key": "b",
-        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe B der Norm VDMA 24992 oder einem Behältnis der Sicherheitsstufe DIN/EN 1143 1 W iderstandsgrad 0 oder I."
+        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe B der Norm VDMA 24992 oder einem Behältnis der Sicherheitsstufe DIN/EN 1143-1 Widerstandsgrad 0 oder I."
       },
       {
         "key": "c",
@@ -6819,11 +6810,11 @@
     "optionen": [
       {
         "key": "a",
-        "text": "In einem S icherheitsbehältnis der Sicherheitsstufe B der Norm VDMA 24992."
+        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe B der Norm VDMA 24992."
       },
       {
         "key": "b",
-        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe DIN/EN 1143 1 Widerstandsgrad 0 oder I."
+        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe DIN/EN 1143-1 Widerstandsgrad 0 oder I."
       },
       {
         "key": "c",
@@ -6848,7 +6839,7 @@
       },
       {
         "key": "b",
-        "text": "Maximal 5 Kurzwaffen in einem Tresor mit Widerstandsgrad 0 (DIN/EN 1143 1)  bis 200 kg. Über 200 kg je 10 Kurzwaffen. Über 10 Kurzwaffen Widerstandsgrad I."
+        "text": "Maximal 5 Kurzwaffen in einem Tresor mit Widerstandsgrad 0 (DIN/EN 1143-1) bis 200 kg. Über 200 kg je 10 Kurzwaffen. Über 10 Kurzwaffen Widerstandsgrad I."
       },
       {
         "key": "c",
@@ -6874,7 +6865,7 @@
       },
       {
         "key": "b",
-        "text": "In einem Tresor mit Widerstandsgrad 0 (DIN/EN 1143 1), dessen Gewicht mindesten 200 kg beträgt."
+        "text": "In einem Tresor mit Widerstandsgrad 0 (DIN/EN 1143-1), dessen Gewicht mindesten 200 kg beträgt."
       },
       {
         "key": "c",
@@ -6917,7 +6908,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "4. Aufbewahrung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Dürfen Sie während des Urlaubes einem Vereinskameraden Ihre WBK pflichtige Schusswaffe zur sicheren Aufbewah rung überlassen?",
+    "frage": "Dürfen Sie während des Urlaubes einem Vereinskameraden Ihre WBK-pflichtige Schusswaffe zur sicheren Aufbewah rung überlassen?",
     "optionen": [
       {
         "key": "a",
@@ -6980,7 +6971,7 @@
       },
       {
         "key": "b",
-        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe DIN/EN 1143 1 Widerstandsgrad 0 oder I."
+        "text": "In einem Sicherheitsbehältnis der Sicherheitsstufe DIN/EN 1143-1 Widerstandsgrad 0 oder I."
       },
       {
         "key": "c",
@@ -7001,7 +6992,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Ja, vollumfängli ch"
+        "text": "Ja, vollumfänglich"
       },
       {
         "key": "b",
@@ -7018,10 +7009,10 @@
     "kapitel": "Kapitel I",
     "themengebiet": "5. Notwehr und Notstand",
     "typ": "Freitext",
-    "frage": "Was ist Notwehr? Notwehr ist diejenige , die ist, um einen Angriff von sich oder einem anderen abzuwenden.",
+    "frage": "Was ist Notwehr? Ergänzen Sie den Gesetzestext: Notwehr ist diejenige Verteidigung, die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff von sich oder einem anderen abzuwenden.",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Lösung: Notwehr ist diejenige Ve rteidigung , die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff von sich oder einem anderen abzuwenden."
+    "musterantwort": "Notwehr ist diejenige Verteidigung, die erforderlich ist, um einen gegenwärtigen rechtswidrigen Angriff von sich oder einem anderen abzuwenden."
   },
   {
     "id": "5.02",
@@ -7455,7 +7446,7 @@
     "frage": "Was bedeutet Notwehrüberschreitung?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Notwehrüberschreitung oder Notwehrexzess liegt vor, wenn der Verteidiger das erforderliche Maß der Abwehr überschreitet ."
+    "musterantwort": "Notwehrüberschreitung oder Notwehrexzess liegt vor, wenn der Verteidiger das erforderliche Maß der Abwehr überschreitet."
   },
   {
     "id": "5.21",
@@ -7465,7 +7456,7 @@
     "frage": "Erklären Sie den Begriff „Notwehrexzess“ und seine strafrechtliche Bedeutung!",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Beim Notwehrexzess wird das zulässige Maß der Abwehr überschritten . Das Handeln wird nur dann entschuldigt, wenn in Furcht, Verwirrung oder Schrecken über die Grenzen der Notwehr hinausgegangen worden ist."
+    "musterantwort": "Beim Notwehrexzess wird das zulässige Maß der Abwehr überschritten. Das Handeln wird nur dann entschuldigt, wenn in Furcht, Verwirrung oder Schrecken über die Grenzen der Notwehr hinausgegangen worden ist."
   },
   {
     "id": "5.22",
@@ -7475,7 +7466,7 @@
     "frage": "Was ist Notstand?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Bei einem Notstand besteht eine gegenwärtige Gefahr für ein Rechtsgut , die nur durch Verletzung eines anderen Rechtsgutes abgewendet werden kann, wobei eine Abwägung der widerstreitenden Interessen stattfinden muss, in deren Ergebnis das als minderwertiger erkannte Rechtsgut geopfert wird."
+    "musterantwort": "Bei einem Notstand besteht eine gegenwärtige Gefahr für ein Rechtsgut, die nur durch Verletzung eines anderen Rechtsgutes abgewendet werden kann, wobei eine Abwägung der widerstreitenden Interessen stattfinden muss, in deren Ergebnis das als minderwertiger erkannte Rechtsgut geopfert wird."
   },
   {
     "id": "5.23",
@@ -7485,14 +7476,14 @@
     "frage": "Was bedeutet rechtfertigender Notstand?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "In rechtfertigendem Notstand handelt, wer in einer gegenwärtigen , nicht anders abwendbaren Gefahr für Leben, Leib, Frei heit, Ehre, Eigentum oder ein anderes Rechtsgut eine Tat begeht, um die Gefahr von sich oder einem Anderen abzuwend en, wenn bei Abwägung der widerstreitenden Interessen das geschützte Interesse das beeinträchtigte wesentlich überwiegt."
+    "musterantwort": "In rechtfertigendem Notstand handelt, wer in einer gegenwärtigen, nicht anders abwendbaren Gefahr für Leben, Leib, Frei heit, Ehre, Eigentum oder ein anderes Rechtsgut eine Tat begeht, um die Gefahr von sich oder einem Anderen abzuwend en, wenn bei Abwägung der widerstreitenden Interessen das geschützte Interesse das beeinträchtigte wesentlich überwiegt."
   },
   {
     "id": "5.24",
     "kapitel": "Kapitel I",
     "themengebiet": "5. Notwehr und Notstand",
     "typ": "Freitext",
-    "frage": "Was bedeutet ents chuldigender Notstand?",
+    "frage": "Was bedeutet entschuldigender Notstand?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Wer in einer gegenwärtigen, nicht anders abwendbaren Gefahr für Leben, Leib oder Freiheit eine rechtswidrige Tat begeht, um die Gefahr von sich, einem Angehörigen oder einer anderen ihm nahestehenden Person abzuwenden, handelt ohne Schuld."
@@ -7565,7 +7556,7 @@
     "frage": "Was versteht man unter Nothilfe?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Die Abwehr eines Angriffes gegen einen Anderen ; sie ist ein Unterfall der Notwehr; die Voraussetzungen sind gleich."
+    "musterantwort": "Die Abwehr eines Angriffes gegen einen Anderen; sie ist ein Unterfall der Notwehr; die Voraussetzungen sind gleich."
   },
   {
     "id": "5.29",
@@ -7643,7 +7634,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "5. Notwehr und Notstand",
     "typ": "Multiple Choice",
-    "frage": "Wann ist ein Angr iff gegenwärtig?",
+    "frage": "Wann ist ein Angriff gegenwärtig?",
     "optionen": [
       {
         "key": "a",
@@ -7696,7 +7687,7 @@
     "frage": "Was bedeutet „rechtswidrig“?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Ein Angriff ist rechtswidrig, wenn er gegen eine Rechtsnorm verstößt und ein Rechtfertigungsgrund nicht gegeben ist ."
+    "musterantwort": "Ein Angriff ist rechtswidrig, wenn er gegen eine Rechtsnorm verstößt und ein Rechtfertigungsgrund nicht gegeben ist."
   },
   {
     "id": "5.36",
@@ -7753,7 +7744,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "5. Notwehr und Notstand",
     "typ": "Multiple Choice",
-    "frage": "Was sind u.a. Rechtfertigungsgründe nach dem Strafgesetzbuch?",
+    "frage": "Was sind u. a. Rechtfertigungsgründe nach dem Strafgesetzbuch?",
     "optionen": [
       {
         "key": "a",
@@ -7830,7 +7821,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "5. Notwehr und Notstand",
     "typ": "Freitext",
-    "frage": "Dürfen Sie auch bei der Gefahr des Verlustes geringwertiger Gegenstände von der Schusswaf fe Gebrauch machen?",
+    "frage": "Dürfen Sie auch bei der Gefahr des Verlustes geringwertiger Gegenstände von der Schusswaffe Gebrauch machen?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Nein (Bei der Gefahr des Verlustes geringwertiger Gegenstände ist Schusswaffengebrauch keine durch Notwehr gebotene Verteidigungshandlung.)"
@@ -7852,7 +7843,7 @@
       },
       {
         "key": "c",
-        "text": "Notw ehrexzess."
+        "text": "Notwehrexzess."
       }
     ],
     "loesung": [
@@ -7865,7 +7856,7 @@
     "kapitel": "Kapitel I",
     "themengebiet": "5. Notwehr und Notstand",
     "typ": "Multiple Choice",
-    "frage": "Eine Person bricht Ihren PKW auf. Sie sehen das vom Fenster Ihres Hauses aus und schießen . Die Person wird dabei verletzt. Wie ist die Situation zu beurteilen?",
+    "frage": "Eine Person bricht Ihren PKW auf. Sie sehen das vom Fenster Ihres Hauses aus und schießen. Die Person wird dabei verletzt. Wie ist die Situation zu beurteilen?",
     "optionen": [
       {
         "key": "a",
@@ -7903,7 +7894,7 @@
     "frage": "Was versteht man unter halbautomatischen Schusswaffen?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Dies sind Schusswaffen, die nach Abgabe eines Schusses selbsttätig erneut schussbereit sind und bei denen aus demselben Lauf durch erneute Betätigung des Abzuges jeweils ein weiterer Schuss abgegeben werden kann (ausgenommen Double Action Revolver)."
+    "musterantwort": "Dies sind Schusswaffen, die nach Abgabe eines Schusses selbsttätig erneut schussbereit sind und bei denen aus demselben Lauf durch erneute Betätigung des Abzuges jeweils ein weiterer Schuss abgegeben werden kann (ausgenommen Double-Action-Revolver)."
   },
   {
     "id": "II.03",
@@ -8045,7 +8036,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Besonderes Merkmal einer Flinte ist, dass ...",
+    "frage": "Besonderes Merkmal einer Flinte ist, dass...",
     "optionen": [
       {
         "key": "a",
@@ -8261,7 +8252,7 @@
       },
       {
         "key": "b",
-        "text": "Eine Waffe im Kaliber .22lr (.22 lfB)."
+        "text": "Eine Waffe im Kaliber.22lr (.22 lfB)."
       },
       {
         "key": "c",
@@ -8306,7 +8297,7 @@
     "frage": "Was sind Einzellader?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Schusswaffen ohne Magazine mit einem oder mehreren Läufen, die vor jedem Schuss aus demselben Lauf von Hand geladen werden ."
+    "musterantwort": "Schusswaffen ohne Magazine mit einem oder mehreren Läufen, die vor jedem Schuss aus demselben Lauf von Hand geladen werden."
   },
   {
     "id": "II.20",
@@ -8360,7 +8351,7 @@
       },
       {
         "key": "c",
-        "text": "Alle Patronen mit speziellen Geschossen (z.B. Scharfrandgeschosse)."
+        "text": "Alle Patronen mit speziellen Geschossen (z. B. Scharfrandgeschosse)."
       }
     ],
     "loesung": [
@@ -8407,7 +8398,7 @@
       },
       {
         "key": "b",
-        "text": "„R“ steh t für Rand."
+        "text": "„R“ steht für Rand."
       },
       {
         "key": "c",
@@ -8498,24 +8489,11 @@
     "id": "II.28",
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
-    "typ": "Multiple Choice",
-    "frage": "Welche Bedeutung haben folgende hervorgehobene Angaben in Patronenbezeichnungen: a) 7.63 Ma user b) .30 06 Springfield c) 7 x 57 R ?",
-    "optionen": [
-      {
-        "key": "a",
-        "text": "Angabe über den Hersteller / Entwickler."
-      },
-      {
-        "key": "b",
-        "text": "Angabe über das Einführungsjahr, (1906 militärisch eingeführt)."
-      },
-      {
-        "key": "c",
-        "text": "Bei den Büchsenpatronen bedeutet der Zusatz „R“, dass die Hülse der Patrone einen Rand hat."
-      }
-    ],
+    "typ": "Freitext",
+    "frage": "Welche Bedeutung haben folgende hervorgehobene Angaben in Patronenbezeichnungen: a) 7,63 Mauser b).30-06 Springfield c) 7 x 57 R?",
+    "optionen": [],
     "loesung": [],
-    "musterantwort": ""
+    "musterantwort": "a) Angabe über den Hersteller / Entwickler (Mauser).\nb) Angabe über das Einführungsjahr (1906 militärisch eingeführt).\nc) Bei den Büchsenpatronen bedeutet der Zusatz „R“, dass die Hülse der Patrone einen Rand hat."
   },
   {
     "id": "II.29",
@@ -8846,7 +8824,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Darf Munition im Kaliber .22lr auch aus Kurzwaffen verschossen werden?",
+    "frage": "Darf Munition im Kaliber.22lr auch aus Kurzwaffen verschossen werden?",
     "optionen": [
       {
         "key": "a",
@@ -8871,7 +8849,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Warum ist z.B. die Munitionsbezeichnung „9 mm“ nicht ausreichend?",
+    "frage": "Warum ist z. B. die Munitionsbezeichnung „9 mm“ nicht ausreichend?",
     "optionen": [
       {
         "key": "a",
@@ -9096,20 +9074,11 @@
     "id": "II.53",
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
-    "typ": "Multiple Choice",
+    "typ": "Freitext",
     "frage": "Welche Arten von Sicherungen an Schusswaffen unterscheiden Sie a) nach der Art der Betätigung (mind. 3) b) nach der Wirkung (mind. 3)?",
-    "optionen": [
-      {
-        "key": "a",
-        "text": "Die Betätigung erfolgt z.B. durch: Schieber, Druckknopf, Hebel, Flügel"
-      },
-      {
-        "key": "b",
-        "text": "Die Sicherung wirkt auf: Abzug, Stange, Schlagstück, Schlagbolzen"
-      }
-    ],
+    "optionen": [],
     "loesung": [],
-    "musterantwort": ""
+    "musterantwort": "a) Nach Betätigung: z. B. Schieber, Druckknopf, Hebel, Flügel, Griffsicherung.\nb) Nach Wirkung: z. B. auf Abzug, Abzugsstange, Schlagstück, Schlagbolzen."
   },
   {
     "id": "II.54",
@@ -9280,7 +9249,7 @@
       },
       {
         "key": "b",
-        "text": "Die Gesc hossgeschwindigkeit reduziert sich auf Null."
+        "text": "Die Geschossgeschwindigkeit reduziert sich auf Null."
       },
       {
         "key": "c",
@@ -9397,7 +9366,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Der Gefährdungsbereich von Geschossen der Patrone im Kaliber .300 WinMag beträgt...",
+    "frage": "Der Gefährdungsbereich von Geschossen der Patrone im Kaliber.300 WinMag beträgt...",
     "optionen": [
       {
         "key": "a",
@@ -9422,7 +9391,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Welche Höchstreichweite haben Geschosse der Patrone im Kaliber .44 Rem. Mag.?",
+    "frage": "Welche Höchstreichweite haben Geschosse der Patrone im Kaliber.44 Rem. Mag.?",
     "optionen": [
       {
         "key": "a",
@@ -9497,7 +9466,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Die Höchstreichweite eines Geschosses im Kaliber .22lr beträgt ca. ...",
+    "frage": "Die Höchstreichweite eines Geschosses im Kaliber.22lr beträgt ca....",
     "optionen": [
       {
         "key": "a",
@@ -9573,7 +9542,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Freitext",
-    "frage": "Nennen Sie die Gefahrenbereiche der Geschosse folgender Munitionssorten: 1. 4 mm M20 2. .22lr 3. .223 Rem. 4. 9 mm Luger 5. .32 S&W Long N.P. 6. .38 Special 7. .44 Rem. Magnum 8. .308 Win. 9. 12/70 Flintenlaufgeschoss 10. Schrotpatronen Schrot 3 mm",
+    "frage": "Nennen Sie die Gefahrenbereiche der Geschosse folgender Munitionssorten: 1. 4 mm M20 2..22lr 3..223 Rem. 4. 9 mm Luger 5..32 S&W Long N.P. 6..38 Special 7..44 Rem. Magnum 8..308 Win. 9. 12/70 Flintenlaufgeschoss 10. Schrotpatronen Schrot 3 mm",
     "optionen": [],
     "loesung": [],
     "musterantwort": "ca. 300 m 1500 m 4300 m 2000 m 1200 m 1500 m 2000 m 5000 m 1200 m 300 m"
@@ -9608,7 +9577,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Womit befasst sich u.a. die Außenballistik?",
+    "frage": "Womit befasst sich u. a. die Außenballistik?",
     "optionen": [
       {
         "key": "a",
@@ -9635,7 +9604,7 @@
     "kapitel": "Kapitel II",
     "themengebiet": "Waffentechnik (Waffen, Munition, Geschosse)",
     "typ": "Multiple Choice",
-    "frage": "Womit befasst sich u.a. die Innenballistik?",
+    "frage": "Womit befasst sich u. a. die Innenballistik?",
     "optionen": [
       {
         "key": "a",
@@ -9698,7 +9667,7 @@
       },
       {
         "key": "c",
-        "text": "Die Visierlinie ist gleichzeitig auch die Flugbahn des Geschosses ."
+        "text": "Die Visierlinie ist gleichzeitig auch die Flugbahn des Geschosses."
       }
     ],
     "loesung": [
@@ -9974,7 +9943,7 @@
     "frage": "Wie wird eine Schusswaffe dauerhaft unbrauchbar gemacht, um sie ohne Erwerbsberechtigung erwerben zu können? (sog. Dekorationswaffe)",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Dauerhaft unbrauchbar gemacht wird eine Schusswaffe durch den Inhaber einer Waffenbearbeitungs oder Waffenherstellungserlaubnis, wenn si e gemäß den Vorgaben der Durchführungsverordnung (EU) 2015/2403 (Deaktivierungsdurchführungsverordnung) bearbeitet wurde, sodass mit allgemein gebräuchlichen Werkzeugen die Schussfähigkeit der Waffe oder der wesentlichen Teile nicht wiederhergestellt werde n kann und dies durch das Anbringen eines Zulassungszeichens (Ortszeichen in der Raute) und durch das Ausstellen einer Deaktivierungsbescheinigung durch ein Beschussamt bestätigt wird."
+    "musterantwort": "Dauerhaft unbrauchbar gemacht wird eine Schusswaffe durch den Inhaber einer Waffenbearbeitungs oder Waffenherstellungserlaubnis, wenn si e gemäß den Vorgaben der Durchführungsverordnung (EU) 2015/2403 (Deaktivierungsdurchführungsverordnung) bearbeitet wurde, sodass mit allgemein gebräuchlichen Werkzeugen die Schussfähigkeit der Waffe oder der wesentlichen Teile nicht wiederhergestellt werden kann und dies durch das Anbringen eines Zulassungszeichens (Ortszeichen in der Raute) und durch das Ausstellen einer Deaktivierungsbescheinigung durch ein Beschussamt bestätigt wird."
   },
   {
     "id": "II.91",
@@ -10089,11 +10058,11 @@
       },
       {
         "key": "b",
-        "text": "Mit Waffen für Randfeuermunition bis Kaliber .22lr (= lfB)."
+        "text": "Mit Waffen für Randfeuermunition bis Kaliber.22lr (= lfB)."
       },
       {
         "key": "c",
-        "text": "Mit Waffen (z.B. im „Kleinstkaliber“ 4 mm M20), sofern diese das Zulassungszeichen „F im Fünfeck“ und das Zulassungszeichen „PTB im Viereck“ tragen."
+        "text": "Mit Waffen (z. B. im „Kleinstkaliber“ 4 mm M20), sofern diese das Zulassungszeichen „F im Fünfeck“ und das Zulassungszeichen „PTB im Viereck“ tragen."
       }
     ],
     "loesung": [
@@ -10210,7 +10179,7 @@
     "frage": "Nennen Sie mindestens fünf Grundregeln zum Umgang mit einer Schusswaffe, die Sie unbedingt beachten müssen!",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Hier sind allgemeine Sicherheitsregeln zu benennen wie z.B.: eine Schusswaffe ist immer als geladen zu betrachten, so lange man sich nicht persönlich vom Gegenteil überzeugt hat es ist immer dafür Sorge zu tragen, dass kein Unbefugter die Waffe an sich nehmen kann die Waffe darf nur in sicherer Richtung ge und entladen werden eine geladene Waffe darf nicht aus der Hand g elegt werden eine Schusswaffe darf nicht spielerisch auf Personen gerichtet werden auf Schießanlagen ist die Schießstandordnung zu beachten den Anweisungen der Aufsicht ist folge zu leisten fremde Waffen dürfen nicht ohne die ausdrückliche Genehmigung des Besitzers oder der Standaufsicht berührt werden kein Hantieren mit Waffen unter dem Einfluss berauschender Mittel"
+    "musterantwort": "Hier sind allgemeine Sicherheitsregeln zu benennen wie z. B.: eine Schusswaffe ist immer als geladen zu betrachten, so lange man sich nicht persönlich vom Gegenteil überzeugt hat es ist immer dafür Sorge zu tragen, dass kein Unbefugter die Waffe an sich nehmen kann die Waffe darf nur in sicherer Richtung ge und entladen werden eine geladene Waffe darf nicht aus der Hand gelegt werden eine Schusswaffe darf nicht spielerisch auf Personen gerichtet werden auf Schießanlagen ist die Schießstandordnung zu beachten den Anweisungen der Aufsicht ist folge zu leisten fremde Waffen dürfen nicht ohne die ausdrückliche Genehmigung des Besitzers oder der Standaufsicht berührt werden kein Hantieren mit Waffen unter dem Einfluss berauschender Mittel"
   },
   {
     "id": "III.09",
@@ -10344,7 +10313,7 @@
     "kapitel": "Kapitel III",
     "themengebiet": "Handhabung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Dürfen Sie mit einem Druckluftgewehr (E0 max. 7,5 J) in Ihrem Keller schießen, wenn sichergestellt ist, dass hierbei niemand gefährdet wird?",
+    "frage": "Dürfen Sie mit einem Druckluftgewehr (E₀ max. 7,5 J) in Ihrem Keller schießen, wenn sichergestellt ist, dass hierbei niemand gefährdet wird?",
     "optionen": [
       {
         "key": "a",
@@ -10390,7 +10359,7 @@
     "kapitel": "Kapitel III",
     "themengebiet": "Handhabung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Den Anordnungen der verantwortlichen Aufsichtsperson auf dem Schießstand ist Folge zu lei sten:",
+    "frage": "Den Anordnungen der verantwortlichen Aufsichtsperson auf dem Schießstand ist Folge zu leisten:",
     "optionen": [
       {
         "key": "a",
@@ -10690,7 +10659,7 @@
     "kapitel": "Kapitel III",
     "themengebiet": "Handhabung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Darf mit einem Gewehr im Kaliber .22lr im befriedeten Besitztum geschossen werden?",
+    "frage": "Darf mit einem Gewehr im Kaliber.22lr im befriedeten Besitztum geschossen werden?",
     "optionen": [
       {
         "key": "a",
@@ -10895,7 +10864,7 @@
     "kapitel": "Kapitel III",
     "themengebiet": "Handhabung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Darf mit einem Gewehr (im Kaliber .308Win) mit Einstecklauf (im Kaliber .22lr) auf einem 50 m KK Stand geschossen werden?",
+    "frage": "Darf mit einem Gewehr (im Kaliber.308Win) mit Einstecklauf (im Kaliber.22lr) auf einem 50 m KK Stand geschossen werden?",
     "optionen": [
       {
         "key": "a",
@@ -10920,7 +10889,7 @@
     "kapitel": "Kapitel III",
     "themengebiet": "Handhabung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Eine halbautomatische Pistole entlade ich, indem ich ...",
+    "frage": "Eine halbautomatische Pistole entlade ich, indem ich...",
     "optionen": [
       {
         "key": "a",
@@ -10970,7 +10939,7 @@
     "kapitel": "Kapitel III",
     "themengebiet": "Handhabung von Schusswaffen und Munition",
     "typ": "Multiple Choice",
-    "frage": "Wie ist ein Revolver im Kaliber .357 Mag. zu entladen?",
+    "frage": "Wie ist ein Revolver im Kaliber.357 Mag. zu entladen?",
     "optionen": [
       {
         "key": "a",
@@ -11266,7 +11235,7 @@
     "frage": "Was versteht man unter pyrotechnischer Munition?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Munition, die explosionsgefährliche Stoffe oder Stoffgemische enthält und einen Licht , Schall , Rauch oder ähnlichen Effekt erzeugt und keine zweckbestimmte Durchschlagskraft im Ziel entfaltet."
+    "musterantwort": "Munition, die explosionsgefährliche Stoffe oder Stoffgemische enthält und einen Licht, Schall, Rauch oder ähnlichen Effekt erzeugt und keine zweckbestimmte Durchschlagskraft im Ziel entfaltet."
   },
   {
     "id": "IV.03",
@@ -11287,7 +11256,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Die Signalp istole Kaliber 4 (26,5 mm)"
+        "text": "Die Signalpistole Kaliber 4 (26,5 mm)"
       },
       {
         "key": "b",
@@ -11339,7 +11308,7 @@
     "frage": "Wann dürfen pyrotechnische Notsignale verwendet werden?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Nur im Notfall , d.h. unter anderem, wenn angezeigt werden soll, dass Gefahr für Leib und Leben besteht und Hilfe erforderlich ist."
+    "musterantwort": "Nur im Notfall, d. h. unter anderem, wenn angezeigt werden soll, dass Gefahr für Leib und Leben besteht und Hilfe erforderlich ist."
   },
   {
     "id": "IV.07",
@@ -11350,7 +11319,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Die brennende Fackel nach Lee waagerecht so halten, dass versprühter Abbrand keine Verletzungen (Hand, Aug en) verursacht oder das Boot/Schiff beschädigt."
+        "text": "Die brennende Fackel nach Lee waagerecht so halten, dass versprühter Abbrand keine Verletzungen (Hand, Augen) verursacht oder das Boot/Schiff beschädigt."
       },
       {
         "key": "b",
@@ -11537,7 +11506,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Multiple Choice",
-    "frage": "Was verkürzt die durch den Hersteller vorgegebene Verb rauchsdauer pyrotechnischer Notsignale oder beeinträchtigt ihre sichere Verwendung?",
+    "frage": "Was verkürzt die durch den Hersteller vorgegebene Verbrauchsdauer pyrotechnischer Notsignale oder beeinträchtigt ihre sichere Verwendung?",
     "optionen": [
       {
         "key": "a",
@@ -11697,7 +11666,7 @@
       },
       {
         "key": "b",
-        "text": "Nur einem Berechtigten, z.B. mit Waffenbesitzkarte."
+        "text": "Nur einem Berechtigten, z. B. mit Waffenbesitzkarte."
       },
       {
         "key": "c",
@@ -11722,7 +11691,7 @@
       },
       {
         "key": "b",
-        "text": "In einem Behältnis der Sicherheitsstufe DIN/EN 1143 1 Widerstandsgrad 0 oder I. Bei Fortführung einer Nutzung eines Behältnisses der Sicherheitsstufe B nach VDMA 24992, die vor dem 06.07.2017 begründet werden, kann dieses Behältnis weitergenutzt werden."
+        "text": "In einem Behältnis der Sicherheitsstufe DIN/EN 1143-1 Widerstandsgrad 0 oder I. Bei Fortführung einer Nutzung eines Behältnisses der Sicherheitsstufe B nach VDMA 24992, die vor dem 06.07.2017 begründet werden, kann dieses Behältnis weitergenutzt werden."
       },
       {
         "key": "c",
@@ -11747,7 +11716,7 @@
       },
       {
         "key": "b",
-        "text": "Eine Aufbewahrung an Land in einem Behältnis der Sicherheitsstufe DIN/EN 1143 1 Widerstandsgrad 0 oder I. Bei Fortführung einer Nutzung eines Behältnisses der Sicherheitsstufe B nach VDMA 24992, die vor dem 06.07.2017 begründet werden, kann dieses Behältnis weitergenutzt werden."
+        "text": "Eine Aufbewahrung an Land in einem Behältnis der Sicherheitsstufe DIN/EN 1143-1 Widerstandsgrad 0 oder I. Bei Fortführung einer Nutzung eines Behältnisses der Sicherheitsstufe B nach VDMA 24992, die vor dem 06.07.2017 begründet werden, kann dieses Behältnis weitergenutzt werden."
       },
       {
         "key": "c",
@@ -11793,7 +11762,7 @@
     "frage": "Warum sollte pyrotechnische Munition möglichst original verpackt gelagert werden?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Diese Verpackungen sind in der Regel wasserdicht und schwimmfähig ."
+    "musterantwort": "Diese Verpackungen sind in der Regel wasserdicht und schwimmfähig."
   },
   {
     "id": "IV.26",
@@ -11851,7 +11820,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Freitext",
-    "frage": "Wo ist eine Waffenbesitzkarte für Inhaber von seegehen den Schiffen zu beantragen?",
+    "frage": "Wo ist eine Waffenbesitzkarte für Inhaber von seegehenden Schiffen zu beantragen?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Bei der zuständigen Behörde des Wohnortes (nicht des Liegeplatzes)."
@@ -11886,7 +11855,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Multiple Choice",
-    "frage": "Was haben Sie nach dem Erwerb einer erlaubnispflichtig en Signalpistole zu tun?",
+    "frage": "Was haben Sie nach dem Erwerb einer erlaubnispflichtigen Signalpistole zu tun?",
     "optionen": [
       {
         "key": "a",
@@ -11934,7 +11903,7 @@
       },
       {
         "key": "c",
-        "text": "Es muss ein Bedürfnis vorliegen (Inhaber eines seegängigen Wasserfahrzeugs)."
+        "text": "Es muss ein Bedürfnis vorliegen (Inhaber eines seegehenden Wasserfahrzeugs)."
       }
     ],
     "loesung": [
@@ -11953,7 +11922,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Durch Vorlage von Unterlagen, aus denen der Besitz eines seegängigen Wasserfahrzeugs (Kaufvertrag, Chartervertrag, Versicherungspolice, Standerschein, Internationaler Bootsschein usw.)"
+        "text": "Durch Vorlage von Unterlagen, aus denen der Besitz eines seegehenden Wasserfahrzeugs (Kaufvertrag, Chartervertrag, Versicherungspolice, Standerschein, Internationaler Bootsschein usw.)"
       },
       {
         "key": "b",
@@ -12005,7 +11974,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "Die der Unterklasse P1, d.h. „Handfackeln rot“ und bestimmte Rauchsignale, Abschussgeräte ohne Schusswaffeneigenschaft."
+        "text": "Die der Unterklasse P1, d. h. „Handfackeln rot“ und bestimmte Rauchsignale, Abschussgeräte ohne Schusswaffeneigenschaft."
       },
       {
         "key": "b",
@@ -12013,7 +11982,7 @@
       },
       {
         "key": "c",
-        "text": "Die der Unterklasse T2, d.h. „Signalraketen rot“, „Fallschirmsignalraketen rot“ und bestimmte Rauchsignale."
+        "text": "Die der Unterklasse T2, d. h. „Signalraketen rot“, „Fallschirmsignalraketen rot“ und bestimmte Rauchsignale."
       }
     ],
     "loesung": [
@@ -12030,7 +11999,7 @@
     "frage": "Welche erlaubnispflichtigen pyrotechnischen Seenotsignale dürfen Wassersportler mit einem im Führerschein eingedruckten Befreiungsvermerk bzw. Sachkundenachweis erwerben?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Die der Unterklasse P , d.h. „Signalraketen rot“, 2 „Fallschirmsignalraketen rot“ und bestimmte Rauchsignale."
+    "musterantwort": "Die der Unterklasse P, d. h. „Signalraketen rot“, 2 „Fallschirmsignalraketen rot“ und bestimmte Rauchsignale."
   },
   {
     "id": "IV.37",
@@ -12040,7 +12009,7 @@
     "frage": "Bis zu welchem Alter ist vom Antragsteller auf erstmalige Erteilung einer waffenrechtlichen Genehmigung zum Erwerb einer Signalpistole Kaliber 4 (26,5 mm) stets ein ärztliches oder fachpsychologisches Zeugnis beizubringen?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Bis zur Vollendung des 25. Lebensjahres ."
+    "musterantwort": "Bis zur Vollendung des 25. Lebensjahres."
   },
   {
     "id": "IV.38",
@@ -12101,7 +12070,7 @@
     "optionen": [
       {
         "key": "a",
-        "text": "P 1 (Bsp.: Handfackeln)"
+        "text": "P1 (z. B.: Handfackeln)"
       },
       {
         "key": "b",
@@ -12109,7 +12078,7 @@
       },
       {
         "key": "c",
-        "text": "P 2 (Bsp.: Signalraketen bzw. Fallschirmsignalraketen mit einer Steighöhe von bis zu 300 Metern)"
+        "text": "P2 (z. B.: Signalraketen bzw. Fallschirmsignalraketen mit einer Steighöhe von bis zu 300 Metern)"
       }
     ],
     "loesung": [
@@ -12162,7 +12131,7 @@
     "frage": "Was ist bei allen steigenden Seenotsignalen unbedingt zu beachten?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "1. Auf freies Schussfeld achten (z.B. Mast und Segel), 2. Signalgerät senkrecht (ggf. in den Wind geneigt) nach oben halten, 3. beim Handhaben und Abfeuern nicht auf Personen richten und selbst nicht mit Körperteilen oder Kleidung vor die Mündung kommen, 4. nicht an Versagern hantieren, sondern diese über Bord werfen."
+    "musterantwort": "1. Auf freies Schussfeld achten (z. B. Mast und Segel), 2. Signalgerät senkrecht (ggf. in den Wind geneigt) nach oben halten, 3. beim Handhaben und Abfeuern nicht auf Personen richten und selbst nicht mit Körperteilen oder Kleidung vor die Mündung kommen, 4. nicht an Versagern hantieren, sondern diese über Bord werfen."
   },
   {
     "id": "IV.44",
@@ -12199,7 +12168,7 @@
     "frage": "Welche Vorteile haben Signalraketen bzw. Signalpatronen, die mit Fallschirmen ausgerüstet sind, gegenüber Signalsternen?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Auf Grund geringerer Sinkgeschwindigkeit (5 m/s) ist eine längere Sichtbarkeit / Brenndauer möglich; dadurch haben sie einen höheren A ufmerksamkeitswert."
+    "musterantwort": "Auf Grund geringerer Sinkgeschwindigkeit (5 m/s) ist eine längere Sichtbarkeit / Brenndauer möglich; dadurch haben sie einen höheren Aufmerksamkeitswert."
   },
   {
     "id": "IV.46",
@@ -12266,7 +12235,7 @@
     "frage": "Woran erkennen Sie an einem pyrotechnischen Notsignal, um welche Unterklasse es sich handelt?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Am Zulassungszeichen: BAM PT 1 oder BAM PT . 2"
+    "musterantwort": "Am Zulassungszeichen: BAM PT1 oder BAM-PT2"
   },
   {
     "id": "IV.50",
@@ -12323,7 +12292,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Freitext",
-    "frage": "Beschreiben Sie den allgemeinen Aufbau eines Seenot Rauc hsignals!",
+    "frage": "Beschreiben Sie den allgemeinen Aufbau eines Seenot Rauchsignals!",
     "optionen": [],
     "loesung": [],
     "musterantwort": "In einem Behälter befindet sich ein Anzünder (meist Reißzünder) mit Verzögerung, der einen pyrotechnischen Satz anzündet, der dann bis zu 4 Minuten lang orange farbenen Rauch abgibt."
@@ -12599,15 +12568,15 @@
     "optionen": [
       {
         "key": "a",
-        "text": "BAM P I"
+        "text": "BAM-PI"
       },
       {
         "key": "b",
-        "text": "BAM PM I"
+        "text": "BAM-PMI"
       },
       {
         "key": "c",
-        "text": "BAM PM II"
+        "text": "BAM-PMII"
       }
     ],
     "loesung": [
@@ -12624,7 +12593,7 @@
     "frage": "Was regelt das Sprengstoffgesetz?",
     "optionen": [],
     "loesung": [],
-    "musterantwort": "Den Umgang und den Verkehr mit sowie die Einfuhr und die Durchfuhr von explosionsgefährlichen Stoffen und Sprengzubehör ."
+    "musterantwort": "Den Umgang und den Verkehr mit sowie die Einfuhr und die Durchfuhr von explosionsgefährlichen Stoffen und Sprengzubehör."
   },
   {
     "id": "IV.66",
@@ -12651,7 +12620,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Freitext",
-    "frage": "Welche nautische Veröffentlichung (Broschüre) beschreibt die seemännisc he Sorgfaltspflicht für Wassersportler, auch für den Seenotfall? Wer gibt sie heraus?",
+    "frage": "Welche nautische Veröffentlichung (Broschüre) beschreibt die seemännische Sorgfaltspflicht für Wassersportler, auch für den Seenotfall? Wer gibt sie heraus?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Die Broschüre „Sicherheit auf dem Wasser“, herausgegeben vom Bundesamt für Seeschifffahrt und Hydrographie (BSH)."
@@ -12722,7 +12691,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Freitext",
-    "frage": "Wie verhalten Sie sich bei einem Munitionsversager in d er Signalpistole?",
+    "frage": "Wie verhalten Sie sich bei einem Munitionsversager in der Signalpistole?",
     "optionen": [],
     "loesung": [],
     "musterantwort": "Waffe in Schussrichtung belassen, über Kopf erneut spannen und nochmals abdrücken, bei erneutem Versagen die Waffe mit nach oben gerichtetem Lauf frühestens nach 1 Minute nach außenbords öffnen und den Versager herausgleiten lassen."
@@ -12744,7 +12713,7 @@
       },
       {
         "key": "c",
-        "text": "Waffe in Schussrichtung belassen, über Kopf erneut spannen und nochmals abdrücken, bei erneutem Versagen die Waffe mit nach oben gerichtetem Lauf frühestens nach 1 Minute nach außenbords öffnen und den Versa ger herausgleiten lassen."
+        "text": "Waffe in Schussrichtung belassen, über Kopf erneut spannen und nochmals abdrücken, bei erneutem Versagen die Waffe mit nach oben gerichtetem Lauf frühestens nach 1 Minute nach außenbords öffnen und den Versager herausgleiten lassen."
       }
     ],
     "loesung": [
@@ -12757,7 +12726,7 @@
     "kapitel": "Kapitel IV",
     "themengebiet": "Not- und Seenotsignalmittel",
     "typ": "Multiple Choice",
-    "frage": "Was machen Sie mit Munition, die beim versuchten V erschießen aus der Signalwaffe nicht gezündet hat (Versager)?",
+    "frage": "Was machen Sie mit Munition, die beim versuchten Verschießen aus der Signalwaffe nicht gezündet hat (Versager)?",
     "optionen": [
       {
         "key": "a",
@@ -13051,7 +13020,7 @@
       },
       {
         "key": "b",
-        "text": "Die Bu ndesanstalt für Materialforschung und prüfung (BAM)."
+        "text": "Die Bundesanstalt für Materialforschung und prüfung (BAM)."
       },
       {
         "key": "c",
